@@ -8,6 +8,7 @@ module.exports.ContentCreater = require("./contentCreater.model");
 module.exports.Restaurants = require("./restaurants.model");
 module.exports.Cuisines = require("./cuisines.model");
 module.exports.Menuitems = require("./menuItems.model");
+module.exports.Review = require("./review.model");
 module.exports.Country = require("./country.model");
 module.exports.State = require("./state.model");
 module.exports.City = require("./city.model");
