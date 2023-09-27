@@ -26,7 +26,7 @@ const contentCreaterSchema = new mongoose.Schema(
     },
     {
         timestamps: true,
-        versionKey: false
+        versionKey: false,
     }
 );
 

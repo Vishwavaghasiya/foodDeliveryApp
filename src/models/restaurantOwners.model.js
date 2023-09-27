@@ -25,7 +25,7 @@ const restaurantOwners = new mongoose.Schema(
         },
         is_active: {
             type: String,
-            trim: true
+            trim: true,
         }
     },
     {

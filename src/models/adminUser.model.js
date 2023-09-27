@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 /**AdminUser schema */
 const adminUserSchema = new mongoose.Schema(
     {
-        admin_id: {
+        user_id: {
             type: Number,
             trim: true
         },
-        user_id: {
+        admin_id: {
             type: Number,
             trim: true
         },
