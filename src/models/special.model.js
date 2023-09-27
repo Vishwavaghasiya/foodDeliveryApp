@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+/**special schema */
 const specialSchema = new mongoose.Schema(
     {
         dish_name: {

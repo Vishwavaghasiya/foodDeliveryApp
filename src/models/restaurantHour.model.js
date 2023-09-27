@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+/**restaurant hour schema */
 const restaurantHourSchema = new mongoose.Schema(
     {
         day_of_week: {
@@ -25,7 +26,7 @@ const restaurantHourSchema = new mongoose.Schema(
     }
 );
 
-const RestaurantHour = mongoose.model("restaurantHour", restaurantHourSchema)
+const RestaurantHour = mongoose.model("restaurantHour", restaurantHourSchema);
 
 module.exports = RestaurantHour
 

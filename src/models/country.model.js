@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+/**country schema */
 const countrySchema = new mongoose.Schema(
     {
         country_name: {

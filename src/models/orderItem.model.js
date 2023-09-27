@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+/**order item schema */
 const orderItemSchema = new mongoose.Schema(
     {
         quantity: {

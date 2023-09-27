@@ -14,7 +14,10 @@ module.exports.addressValidation = require("./address.validation");
 module.exports.promotionValidation = require("./promotion.validation");
 module.exports.paymentMethodValidation = require("./paymentMethod.validation");
 module.exports.paymentHistoryValidation = require("./paymentHistory.validation");
+module.exports.notificationValidation = require("./notification.validation");
 module.exports.categoriesValidation = require("./categories.validation");
+
+
 module.exports.deliveryAddressValidation = require("./deliveryAddress.validation");
 module.exports.promocodeValidation = require("./promocode.validation");
 module.exports.orderItemValidation = require("./orderItem.validation");

@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+/**delivery driver schema */
 const deliveryDriversSchema = new mongoose.Schema(
     {
         vehicle_number: {

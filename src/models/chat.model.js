@@ -1,7 +1,16 @@
 const mongoose = require("mongoose");
 
+/**chat schema */
 const chatSchema = new mongoose.Schema(
     {
+        sender: {
+            type: String,
+            trim: true
+        },
+        text: {
+            type: String,
+            trim: true
+        },
         created_at: {
             type: Date,
             default: Date.now,

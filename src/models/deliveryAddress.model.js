@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-// deliveryAddress model
+/**deliveryAddress model */
 const deliveryAddressSchema = new mongoose.Schema(
     {
         address_line1: {

@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+/**user setting schema */
 const userSettingSchema = new mongoose.Schema(
     {
         email_notifications: {
@@ -33,7 +34,7 @@ const userSettingSchema = new mongoose.Schema(
     }
 );
 
-const UserSetting = mongoose.model("userSetting", userSettingSchema)
+const UserSetting = mongoose.model("userSetting", userSettingSchema);
 
 module.exports = UserSetting
 

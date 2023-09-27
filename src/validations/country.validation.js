@@ -1,7 +1,7 @@
 const Joi = require("joi");
 
-// Create state validation
-const createState = {
+// Create country validation
+const createCountry = {
   body: Joi.object().keys({
     country_name: Joi.string().required().trim(),
     continent_name: Joi.string().required().trim(),
@@ -12,5 +12,5 @@ const createState = {
 };
 
 module.exports = {
-  createState,
+  createCountry,
 };

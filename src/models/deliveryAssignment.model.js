@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+/**delivery assignment schema */
 const deliveryAssignmentSchema = new mongoose.Schema(
     {
         assignment_at: {

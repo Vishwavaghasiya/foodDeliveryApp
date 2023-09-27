@@ -11,12 +11,11 @@ module.exports.Review = require("./review.model");
 module.exports.Orders = require("./orders.model");
 module.exports.Favorite = require("./favorite.model");
 module.exports.Address = require("./address.model");
-module.exports.Promotion = require("./promotions.model");
+module.exports.Promotion = require("./promotion.model");
 module.exports.PaymentMethods = require("./paymentMethod.model");
 module.exports.PaymentHistory = require("./paymentHistory.model");
 module.exports.Notification = require("./notification.model");
 module.exports.Categories = require("./categories.model");
-
 module.exports.DeliveryAddress = require("./deliveryAddress.model");
 module.exports.Promocode = require("./promocode.model");
 module.exports.OrderItem = require("./orderItem.model");

@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+/**rating schema */
 const ratingSchema = new mongoose.Schema(
     {
         rating: {

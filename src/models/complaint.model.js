@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
-const complainttSchema = new mongoose.Schema(
+/**complaint schema */
+const complaintSchema = new mongoose.Schema(
     {
         content: {
             type: String,
@@ -21,7 +22,7 @@ const complainttSchema = new mongoose.Schema(
     }
 );
 
-const Complaint = mongoose.model("complaint", complainttSchema);
+const Complaint = mongoose.model("complaint", complaintSchema);
 
 module.exports = Complaint
 
