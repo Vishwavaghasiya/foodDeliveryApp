@@ -16,6 +16,7 @@ module.exports.PaymentMethods = require("./paymentMethod.model");
 module.exports.PaymentHistory = require("./paymentHistory.model");
 module.exports.Notification = require("./notification.model");
 module.exports.Categories = require("./categories.model");
+
 module.exports.DeliveryAddress = require("./deliveryAddress.model");
 module.exports.Promocode = require("./promocode.model");
 module.exports.OrderItem = require("./orderItem.model");
