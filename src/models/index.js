@@ -1,0 +1,10 @@
+module.exports.User = require("./user.model");
+module.exports.AdminUser = require("./adminUser.model");
+module.exports.CustomerSupportAgent = require("./customerSupportAgent.model");
+module.exports.RestaurantOwners = require("./restaurantOwners.model");
+module.exports.MarketingManager = require("./marketingManager.model");
+module.exports.DataAnalysts = require("./dataAnalysts.model");
+module.exports.ContentCreater = require("./contentCreater.model");
+module.exports.Restaurants = require("./restaurants.model");
+module.exports.Cuisines = require("./cuisines.model");
+module.exports.Menuitems = require("./menuItems.model");
