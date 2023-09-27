@@ -31,4 +31,5 @@ const customerSupportAgent = new mongoose.Schema(
 );
 
 const CustomerSupportAgent = mongoose.model("customerSupportAgent", customerSupportAgent);
+
 module.exports = CustomerSupportAgent;

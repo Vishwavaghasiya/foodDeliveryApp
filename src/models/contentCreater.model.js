@@ -31,4 +31,5 @@ const contentCreaterSchema = new mongoose.Schema(
 );
 
 const ContentCreater = mongoose.model("contentCreater", contentCreaterSchema);
+
 module.exports = ContentCreater

@@ -39,4 +39,5 @@ const marketingManagerSchema = new mongoose.Schema(
 );
 
 const MarketingManager = mongoose.model("marketingManager", marketingManagerSchema);
+
 module.exports = MarketingManager

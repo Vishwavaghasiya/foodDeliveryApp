@@ -31,4 +31,5 @@ const dataAnalystsSchema = new mongoose.Schema(
 );
 
 const DataAnalysts = mongoose.model("dataAnalysts", dataAnalystsSchema);
+
 module.exports = DataAnalysts
