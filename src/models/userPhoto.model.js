@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 
-const chat_messageSchema = new mongoose.Schema(
+const userPhotoSchema = new mongoose.Schema(
     {
-        content: {
+        photo_url: {
             type: String,
             trim: true,
         },
-        created_at: {
-            type: Date,
-            default: Date.now,
+        caption: {
+            type: String,
+            trim: true,
         },
         is_active: {
             type: Boolean,
@@ -21,9 +21,8 @@ const chat_messageSchema = new mongoose.Schema(
     }
 );
 
-const Chat_message = mongoose.model("chat_message", chat_messageSchema)
+const UserPhoto = mongoose.model("userPhoto", userPhotoSchema)
 
-module.exports = Chat_message
+module.exports = UserPhoto
 
-// chat_id ref
 // user_id ref

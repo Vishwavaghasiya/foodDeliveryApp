@@ -1,18 +1,18 @@
 const mongoose = require("mongoose");
 
-const restaurant_hourSchema = new mongoose.Schema(
+const deliveryAssignmentSchema = new mongoose.Schema(
     {
-        day_of_week: {
+        assignment_at: {
+            type: Date,
+            default: Date.now,
+        },
+        delivered_at: {
+            type: Date,
+            default: Date.now,
+        },
+        status: {
             type: String,
             trim: true,
-        },
-        open_time: {
-            type: Date,
-            default: Date.now,
-        },
-        close_time: {
-            type: Date,
-            default: Date.now,
         },
         is_active: {
             type: Boolean,
@@ -25,8 +25,9 @@ const restaurant_hourSchema = new mongoose.Schema(
     }
 );
 
-const Restaurant_hour = mongoose.model("restaurant_hour", restaurant_hourSchema)
+const DeliveryAssignment = mongoose.model("deliveryAssignment", deliveryAssignmentSchema)
 
-module.exports = Restaurant_hour
+module.exports = DeliveryAssignment
 
-// restaurant_id ref
+// order_id ref
+// driver_id ref

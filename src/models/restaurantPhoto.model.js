@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const restaurant_photoSchema = new mongoose.Schema(
+const restaurantPhotoSchema = new mongoose.Schema(
     {
         photo_url: {
             type: String,
@@ -21,8 +21,8 @@ const restaurant_photoSchema = new mongoose.Schema(
     }
 );
 
-const Restaurant_photo = mongoose.model("restaurant_photo", restaurant_photoSchema)
+const RestaurantPhoto = mongoose.model("restaurantPhoto", restaurantPhotoSchema)
 
-module.exports = Restaurant_photo
+module.exports = RestaurantPhoto
 
 // restaurant_id ref

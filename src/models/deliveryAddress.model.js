@@ -1,24 +1,28 @@
 const mongoose = require("mongoose");
 
-const user_settingSchema = new mongoose.Schema(
+const deliveryAddressSchema = new mongoose.Schema(
     {
-        email_notifications: {
-            type: Boolean,
-            trim: true,
-        },
-        push_notifications: {
-            type: Boolean,
-            trim: true,
-        },
-        sms_notifications: {
-            type: Boolean,
-            trim: true,
-        },
-        language_preference: {
+        address_line1: {
             type: String,
             trim: true,
         },
-        theme_preference: {
+        address_line2: {
+            type: String,
+            trim: true,
+        },
+        city: {
+            type: String,
+            trim: true,
+        },
+        state: {
+            type: String,
+            trim: true,
+        },
+        country: {
+            type: String,
+            trim: true,
+        },
+        postal_code: {
             type: String,
             trim: true,
         },
@@ -33,8 +37,8 @@ const user_settingSchema = new mongoose.Schema(
     }
 );
 
-const User_setting = mongoose.model("user_setting", user_settingSchema)
+const DeliveryAddress = mongoose.model("deliveryAddress", deliveryAddressSchema)
 
-module.exports = User_setting
+module.exports = DeliveryAddress
 
 // user_id ref

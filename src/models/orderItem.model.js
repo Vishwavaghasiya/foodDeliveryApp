@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const order_itemSchema = new mongoose.Schema(
+const orderItemSchema = new mongoose.Schema(
     {
         quantity: {
             type: Number,
@@ -21,9 +21,9 @@ const order_itemSchema = new mongoose.Schema(
     }
 );
 
-const Order_item = mongoose.model("order_item", order_itemSchema)
+const OrderItem = mongoose.model("orderItem", orderItemSchema)
 
-module.exports = Order_item
+module.exports = OrderItem
 
 // order_id ref
 // menu_item_id ref

@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 
-const user_photoSchema = new mongoose.Schema(
+const deliveryDriversSchema = new mongoose.Schema(
     {
-        photo_url: {
+        vehicle_number: {
             type: String,
             trim: true,
         },
-        caption: {
+        license_number: {
             type: String,
             trim: true,
         },
@@ -21,8 +21,8 @@ const user_photoSchema = new mongoose.Schema(
     }
 );
 
-const User_photo = mongoose.model("user_photo", user_photoSchema)
+const DeliveryDrivers = mongoose.model("deliveryDrivers", deliveryDriversSchema)
 
-module.exports = User_photo
+module.exports = DeliveryDrivers
 
 // user_id ref

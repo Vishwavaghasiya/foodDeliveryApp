@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 
-const delivery_driversSchema = new mongoose.Schema(
+const chatMessageSchema = new mongoose.Schema(
     {
-        vehicle_number: {
+        content: {
             type: String,
             trim: true,
         },
-        license_number: {
-            type: String,
-            trim: true,
+        created_at: {
+            type: Date,
+            default: Date.now,
         },
         is_active: {
             type: Boolean,
@@ -21,8 +21,9 @@ const delivery_driversSchema = new mongoose.Schema(
     }
 );
 
-const Delivery_drivers = mongoose.model("delivery_drivers", delivery_driversSchema)
+const ChatMessage = mongoose.model("chatMessage", chatMessageSchema)
 
-module.exports = Delivery_drivers
+module.exports = ChatMessage
 
+// chat_id ref
 // user_id ref
