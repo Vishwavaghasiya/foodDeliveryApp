@@ -20,12 +20,12 @@ const marketingManagerSchema = new mongoose.Schema(
             trim: true
         },
         start_date: {
-            type: String,
-            trim: true
+            type: Date,
+            default: Date.now()
         },
         end_date: {
-            type: String,
-            trim: true
+            type: Date,
+            default: Date.now()
         },
         is_active: {
             type: String,
