@@ -1,18 +1,18 @@
 const mongoose = require("mongoose");
 
-const citySchema = new mongoose.Schema(
+const specialSchema = new mongoose.Schema(
     {
-        City_name: {
+        dish_name: {
             type: String,
             trim: true,
         },
-        population: {
-            type: Number,
+        description: {
+            type: String,
             trim: true,
         },
-        created_at: {
-            type: Date,
-            default: Date.now,
+        price: {
+            type: Number,
+            trim: true,
         },
         is_active: {
             type: Boolean,
@@ -25,9 +25,8 @@ const citySchema = new mongoose.Schema(
     }
 );
 
-const City = mongoose.model("city", citySchema)
+const Special = mongoose.model("special", specialSchema)
 
-module.exports = City
+module.exports = Special
 
-// country id ref
-// state id ref
+// restaurant_id ref

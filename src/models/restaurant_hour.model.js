@@ -1,16 +1,16 @@
 const mongoose = require("mongoose");
 
-const citySchema = new mongoose.Schema(
+const restaurant_hourSchema = new mongoose.Schema(
     {
-        City_name: {
+        day_of_week: {
             type: String,
             trim: true,
         },
-        population: {
-            type: Number,
-            trim: true,
+        open_time: {
+            type: Date,
+            default: Date.now,
         },
-        created_at: {
+        close_time: {
             type: Date,
             default: Date.now,
         },
@@ -25,9 +25,8 @@ const citySchema = new mongoose.Schema(
     }
 );
 
-const City = mongoose.model("city", citySchema)
+const Restaurant_hour = mongoose.model("restaurant_hour", restaurant_hourSchema)
 
-module.exports = City
+module.exports = Restaurant_hour
 
-// country id ref
-// state id ref
+// restaurant_id ref

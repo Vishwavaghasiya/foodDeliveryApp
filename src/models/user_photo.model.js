@@ -1,18 +1,14 @@
 const mongoose = require("mongoose");
 
-const citySchema = new mongoose.Schema(
+const user_photoSchema = new mongoose.Schema(
     {
-        City_name: {
+        photo_url: {
             type: String,
             trim: true,
         },
-        population: {
-            type: Number,
+        caption: {
+            type: String,
             trim: true,
-        },
-        created_at: {
-            type: Date,
-            default: Date.now,
         },
         is_active: {
             type: Boolean,
@@ -25,9 +21,8 @@ const citySchema = new mongoose.Schema(
     }
 );
 
-const City = mongoose.model("city", citySchema)
+const User_photo = mongoose.model("user_photo", user_photoSchema)
 
-module.exports = City
+module.exports = User_photo
 
-// country id ref
-// state id ref
+// user_id ref
