@@ -3,7 +3,7 @@ module.exports.adminUserValidation = require("./adminUser.validation");
 module.exports.customerSupportAgentValidation = require("./cutomerSupportAgent.validation");
 module.exports.restaurantOwnersValidation = require("./restaurantOwners.validation");
 module.exports.marketingManagerValidation = require("./marketingManager.validation");
-module.exports.dataAnalystsValidation = require("./dataAnalysts.validation");
+module.exports.dataAnalysisValidation = require("./dataAnalysis.validation");
 module.exports.contentCreatersValidation = require("./contentCreaters.validation");
 module.exports.restaurantValidation = require("./restaurant.validation");
 module.exports.menuItemsValidation = require("./menuItems.validation");
@@ -16,8 +16,6 @@ module.exports.paymentMethodValidation = require("./paymentMethod.validation");
 module.exports.paymentHistoryValidation = require("./paymentHistory.validation");
 module.exports.notificationValidation = require("./notification.validation");
 module.exports.categoriesValidation = require("./categories.validation");
-
-
 module.exports.deliveryAddressValidation = require("./deliveryAddress.validation");
 module.exports.promocodeValidation = require("./promocode.validation");
 module.exports.orderItemValidation = require("./orderItem.validation");

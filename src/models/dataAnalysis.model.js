@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 /**Data analysts schema */
-const dataAnalystsSchema = new mongoose.Schema(
+const dataAnalysisSchema = new mongoose.Schema(
     {
         analyst_id: {
             type: Number,
@@ -30,6 +30,6 @@ const dataAnalystsSchema = new mongoose.Schema(
     }
 );
 
-const DataAnalysts = mongoose.model("dataAnalysts", dataAnalystsSchema);
+const DataAnalysis = mongoose.model("dataAnalysis", dataAnalysisSchema);
 
-module.exports = DataAnalysts
+module.exports = DataAnalysis
