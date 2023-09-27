@@ -26,3 +26,4 @@ module.exports.Delivery_driver = require("./delivery_driver.model");
 module.exports.Message = require("./message.model");
 module.exports.Order_item = require("./order_item.model");
 module.exports.Promocode = require("./promocode.model");
+module.exports.Delivery_address = require("./delivery_address.model");

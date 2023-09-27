@@ -10,11 +10,19 @@ const delivery_addressSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
-        delivered_at: {
-            type: Date,
-            default: Date.now,
+        city: {
+            type: String,
+            trim: true,
         },
-        status: {
+        state: {
+            type: String,
+            trim: true,
+        },
+        country: {
+            type: String,
+            trim: true,
+        },
+        postal_code: {
             type: String,
             trim: true,
         },
@@ -34,6 +42,3 @@ const Delivery_address = mongoose.model("delivery_address", delivery_addressSche
 module.exports = Delivery_address
 
 // user_id ref
-// city_id ref
-// state_id ref
-// country_id ref
