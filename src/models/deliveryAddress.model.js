@@ -37,7 +37,7 @@ const deliveryAddressSchema = new mongoose.Schema(
     }
 );
 
-const DeliveryAddress = mongoose.model("deliveryAddress", deliveryAddressSchema)
+const DeliveryAddress = mongoose.model("deliveryAddress", deliveryAddressSchema);
 
 module.exports = DeliveryAddress
 

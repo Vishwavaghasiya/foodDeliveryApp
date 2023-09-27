@@ -21,7 +21,7 @@ const deliveryDriversSchema = new mongoose.Schema(
     }
 );
 
-const DeliveryDrivers = mongoose.model("deliveryDrivers", deliveryDriversSchema)
+const DeliveryDrivers = mongoose.model("deliveryDrivers", deliveryDriversSchema);
 
 module.exports = DeliveryDrivers
 

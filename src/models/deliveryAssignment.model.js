@@ -25,7 +25,7 @@ const deliveryAssignmentSchema = new mongoose.Schema(
     }
 );
 
-const DeliveryAssignment = mongoose.model("deliveryAssignment", deliveryAssignmentSchema)
+const DeliveryAssignment = mongoose.model("deliveryAssignment", deliveryAssignmentSchema);
 
 module.exports = DeliveryAssignment
 

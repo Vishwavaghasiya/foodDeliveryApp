@@ -26,7 +26,7 @@ const dataAnalystsSchema = new mongoose.Schema(
     },
     {
         timestamps: true,
-        versionKey: false
+        versionKey: false,
     }
 );
 
