@@ -6,7 +6,6 @@ module.exports.MarketingManager = require("./marketingManager.model");
 module.exports.DataAnalysts = require("./dataAnalysts.model");
 module.exports.ContentCreater = require("./contentCreater.model");
 module.exports.Restaurants = require("./restaurants.model");
-module.exports.Cuisines = require("./cuisines.model");
 module.exports.Menuitems = require("./menuItems.model");
 module.exports.Review = require("./review.model");
 module.exports.Orders = require("./orders.model");

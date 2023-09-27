@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-/**marketing manager validation -->> create */
+/**create marketing manager */
 const createMarketingManager = {
     body: Joi.object().keys({
         campaign_name: Joi.string().required().trim(),

@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-/**admin user validation */
+/**create admin user */
 const createAdminUser = {
     body: Joi.object().keys({
         role: Joi.string().required().trim(),

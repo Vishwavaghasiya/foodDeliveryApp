@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-/** Customer support agent validation*/
+/** create customer support agent */
 const createCustomerSupportAgent = {
     body: Joi.object().keys({
         department: Joi.string().required().trim(),

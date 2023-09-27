@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-/**user validation */
+/**create user */
 const createUser = {
     body: Joi.object().keys({
         user_name: Joi.string().required().trim(),

@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-/**restaurant owner validation*/
+/** create restaurant owner*/
 const createRestaurantOwners = {
     body: Joi.object().keys({
         role: Joi.string().required().trim(),
