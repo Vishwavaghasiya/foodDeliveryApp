@@ -1,0 +1,10 @@
+module.exports.userController = require("./user.controller");
+module.exports.adminUserController = require("./adminUser.controller");
+module.exports.customerSupportAgentController = require("./customerSupportAgent.controller");
+module.exports.restaurantOwnersController = require("./restaurantOwners.controller");
+module.exports.marketingManagerController = require("./marketingManager.controller");
+module.exports.dataAnalysisController = require("./dataAnalysis.controller");
+module.exports.contentCreaterController = require("./contentCreater.controller");
+module.exports.restaurantController = require("./restaurant.controller");
+module.exports.menuItemsController = require("./menuItems.controller");
+module.exports.reviewController = require("./review.controller");

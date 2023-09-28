@@ -1,7 +1,7 @@
 const Joi = require("joi");
 
 /**create menu items */
-const createMenuitems = {
+const createMenuItems = {
     body: Joi.object().keys({
         name: Joi.string().required().trim(),
         description: Joi.string().required().trim(),
@@ -10,5 +10,5 @@ const createMenuitems = {
 }
 
 module.exports = {
-    createMenuitems
+    createMenuItems
 }
