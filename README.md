@@ -29,10 +29,12 @@ npm install
 
 
 -->  Usage
+
 Provide instructions on how to use your food delivery app. Include examples and screenshots if possible. You can create subsections for different usage scenarios, such as:
 
 
 -->Customer
+
 Register or log in.
 Browse restaurants and menu items.
 Place an order.
@@ -40,19 +42,20 @@ Track the delivery.
 
 
 -->Restaurant Owner
+
 Register as a restaurant owner.
 Add restaurant details and menu items.
 Manage orders and deliveries.
 
 
 -->Delivery Driver
+
 Sign up as a delivery driver.
 Accept delivery requests.
 Navigate to the customer's location.
 
 
 -->  Features
-List the key features of your app. Use bullet points for clarity.
 
 User authentication and authorization
 Restaurant management
@@ -63,7 +66,6 @@ Search and filter restaurants
 
 
 -->  Technologies Used
-List the technologies and frameworks you used to develop the app. Include versions if applicable.
 
 Node.js
 Express.js
@@ -74,11 +76,11 @@ Stripe API (for payments)
 
 
 -->  Contributing
+
 Explain how others can contribute to your project. Include information about creating issues, pull requests, and any guidelines for contributors.
 
 
 -->  License
-Specify the license under which your app is distributed. You can choose from various open-source licenses like MIT, Apache, or GPL.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
