@@ -6,10 +6,15 @@ Provide a brief and clear description of your food delivery app. Mention its mai
 
 Table of Contents
 -->  Installation
+
 -->  Usage
+
 -->  Features
+
 -->  Technologies Used
+
 -->  Contributing
+
 -->  License
 
 -->  Installation
