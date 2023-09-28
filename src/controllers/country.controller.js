@@ -36,7 +36,7 @@ const getCountryList = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: "Got list of countries successfully!...",
+      message: "Got list of Countries successfully!...",
       data: getList,
     });
   } catch (error) {
@@ -54,7 +54,7 @@ const getDetails = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: "Got details of country successfully!...",
+      message: "Got details of Country successfully!...",
       data: getDetails,
     });
   } catch (error) {

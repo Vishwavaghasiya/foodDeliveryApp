@@ -1,26 +1,26 @@
-const { stateService } = require("../services");
+const { cityService } = require("../services");
 
-// create state
-const createState = async (req, res) => {
+// create city
+const createCity = async (req, res) => {
   try {
     const reqBody = req.body;
-    const state = await stateService.createState(reqBody);
-    if (!state) {
+    const city = await cityService.createCity(reqBody);
+    if (!city) {
       throw new Error("oppsss!..., seems like something went wrong, please try again later");
     }
 
     res.status(200).json({
       success: true,
       message: "New record added to the database!",
-      data: { state },
+      data: { city },
     });
   } catch (error) {
     res.status(400).json({ success: false, message: error.message });
   }
 };
 
-// Get state list
-const getStateList = async (req, res) => {
+// Get city list
+const getCityList = async (req, res) => {
   try {
     const { search, ...options } = req.query;
     let filter = {};
@@ -32,11 +32,11 @@ const getStateList = async (req, res) => {
       ];
     }
 
-    const getList = await stateService.getStateList(filter, options);
+    const getList = await cityService.getCityList(filter, options);
 
     res.status(200).json({
       success: true,
-      message: "Got list of States successfully!...",
+      message: "Got list of Cities successfully!...",
       data: getList,
     });
   } catch (error) {
@@ -44,17 +44,17 @@ const getStateList = async (req, res) => {
   }
 };
 
-// Get state details by id
+// Get city details by id
 const getDetails = async (req, res) => {
   try {
-    const getDetails = await stateService.getStateById(req.params.stateId);
+    const getDetails = await cityService.getCityById(req.params.cityId);
     if (!getDetails) {
-      throw new Error("ooppsss!... State not found.");
+      throw new Error("ooppsss!... City not found.");
     }
 
     res.status(200).json({
       success: true,
-      message: "Got details of State successfully!...",
+      message: "Got details of City successfully!...",
       data: getDetails,
     });
   } catch (error) {
@@ -62,39 +62,39 @@ const getDetails = async (req, res) => {
   }
 };
 
-// state details update by id
+// city details update by id
 const updateDetails = async (req, res) => {
   try {
-    const stateId = req.params.stateId;
-    const stateExists = await stateService.getStateById(stateId);
-    if (!stateExists) {
-      throw new Error("State not found!");
+    const cityId = req.params.cityId;
+    const cityExists = await cityService.getCityById(cityId);
+    if (!cityExists) {
+      throw new Error("City not found!");
     }
 
-    await stateService.updateDetails(stateId, req.body);
+    await cityService.updateDetails(cityId, req.body);
 
     res
       .status(200)
-      .json({ success: true, message: "State details update successfully!" });
+      .json({ success: true, message: "City details update successfully!" });
   } catch (error) {
     res.status(400).json({ success: false, message: error.message });
   }
 };
 
-// Delete state by id
-const deleteState = async (req, res) => {
+// Delete city by id
+const deleteCity = async (req, res) => {
   try {
-    const stateId = req.params.stateId;
-    const stateExists = await stateService.getStateById(stateId);
-    if (!stateExists) {
-      throw new Error("State not found!");
+    const cityId = req.params.cityId;
+    const cityExists = await cityService.getCityById(cityId);
+    if (!cityExists) {
+      throw new Error("City not found!");
     }
 
-    await stateService.deleteState(stateId);
+    await cityService.deleteCity(cityId);
 
     res.status(200).json({
       success: true,
-      message: "State delete successfully!",
+      message: "City delete successfully!",
     });
   } catch (error) {
     res.status(400).json({ success: false, message: error.message });
@@ -102,9 +102,9 @@ const deleteState = async (req, res) => {
 };
 
 module.exports = {
-  createState,
-  getStateList,
+  createCity,
+  getCityList,
   getDetails,
   updateDetails,
-  deleteState,
+  deleteCity,
 };
