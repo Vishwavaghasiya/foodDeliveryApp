@@ -22,8 +22,7 @@ const messageSchema = new mongoose.Schema(
     }
 );
 
-const Message = mongoose.model("message", messageSchema)
-
+const Message = mongoose.model("message", messageSchema);
 module.exports = Message
 
 // user_id ref sender
