@@ -35,7 +35,6 @@ const userSettingSchema = new mongoose.Schema(
 );
 
 const UserSetting = mongoose.model("userSetting", userSettingSchema);
-
 module.exports = UserSetting
 
 // user_id ref

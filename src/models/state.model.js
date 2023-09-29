@@ -26,8 +26,7 @@ const stateSchema = new mongoose.Schema(
     }
 );
 
-const State = mongoose.model("state", stateSchema)
-
+const State = mongoose.model("state", stateSchema);
 module.exports = State
 
 // country id ref

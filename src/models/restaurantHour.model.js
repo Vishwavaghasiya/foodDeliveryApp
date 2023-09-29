@@ -27,7 +27,6 @@ const restaurantHourSchema = new mongoose.Schema(
 );
 
 const RestaurantHour = mongoose.model("restaurantHour", restaurantHourSchema);
-
 module.exports = RestaurantHour
 
 // restaurant_id ref

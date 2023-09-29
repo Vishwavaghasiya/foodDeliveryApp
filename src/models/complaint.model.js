@@ -23,7 +23,6 @@ const complaintSchema = new mongoose.Schema(
 );
 
 const Complaint = mongoose.model("complaint", complaintSchema);
-
 module.exports = Complaint
 
 // restaurant_id ref

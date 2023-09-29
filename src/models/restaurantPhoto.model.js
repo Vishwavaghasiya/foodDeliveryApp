@@ -21,8 +21,7 @@ const restaurantPhotoSchema = new mongoose.Schema(
     }
 );
 
-const RestaurantPhoto = mongoose.model("restaurantPhoto", restaurantPhotoSchema)
-
+const RestaurantPhoto = mongoose.model("restaurantPhoto", restaurantPhotoSchema);
 module.exports = RestaurantPhoto
 
 // restaurant_id ref

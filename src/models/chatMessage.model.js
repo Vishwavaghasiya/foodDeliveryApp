@@ -23,7 +23,6 @@ const chatMessageSchema = new mongoose.Schema(
 );
 
 const ChatMessage = mongoose.model("chatMessage", chatMessageSchema);
-
 module.exports = ChatMessage
 
 // chat_id ref
