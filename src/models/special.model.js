@@ -26,8 +26,7 @@ const specialSchema = new mongoose.Schema(
     }
 );
 
-const Special = mongoose.model("special", specialSchema)
-
+const Special = mongoose.model("special", specialSchema);
 module.exports = Special
 
 // restaurant_id ref

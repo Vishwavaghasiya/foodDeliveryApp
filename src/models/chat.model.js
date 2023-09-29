@@ -27,7 +27,6 @@ const chatSchema = new mongoose.Schema(
 );
 
 const Chat = mongoose.model("chat", chatSchema);
-
 module.exports = Chat
 
 // user_id ref user1

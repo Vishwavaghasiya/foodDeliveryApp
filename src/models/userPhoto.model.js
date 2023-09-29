@@ -22,8 +22,7 @@ const userPhotoSchema = new mongoose.Schema(
     }
 );
 
-const UserPhoto = mongoose.model("userPhoto", userPhotoSchema)
-
+const UserPhoto = mongoose.model("userPhoto", userPhotoSchema);
 module.exports = UserPhoto
 
 // user_id ref
