@@ -39,7 +39,5 @@ const deliveryAddressSchema = new mongoose.Schema(
 );
 
 const DeliveryAddress = mongoose.model("deliveryAddress", deliveryAddressSchema);
-
 module.exports = DeliveryAddress
-
 // user_id ref

@@ -22,8 +22,7 @@ const orderItemSchema = new mongoose.Schema(
     }
 );
 
-const OrderItem = mongoose.model("orderItem", orderItemSchema)
-
+const OrderItem = mongoose.model("orderItem", orderItemSchema);
 module.exports = OrderItem
 
 // order_id ref

@@ -31,5 +31,4 @@ const dataAnalysisSchema = new mongoose.Schema(
 );
 
 const DataAnalysis = mongoose.model("dataAnalysis", dataAnalysisSchema);
-
 module.exports = DataAnalysis

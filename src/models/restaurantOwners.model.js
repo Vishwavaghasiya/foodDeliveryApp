@@ -35,5 +35,4 @@ const restaurantOwners = new mongoose.Schema(
 );
 
 const RestaurantOwners = mongoose.model("restaurantOwners", restaurantOwners);
-
 module.exports = RestaurantOwners;

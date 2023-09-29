@@ -27,7 +27,6 @@ const deliveryAssignmentSchema = new mongoose.Schema(
 );
 
 const DeliveryAssignment = mongoose.model("deliveryAssignment", deliveryAssignmentSchema);
-
 module.exports = DeliveryAssignment
 
 // order_id ref
