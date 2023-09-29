@@ -22,11 +22,7 @@ const ratingSchema = new mongoose.Schema(
     }
 );
 
-<<<<<<< HEAD
 const Rating = mongoose.model("rating", ratingSchema);
-=======
-const Rating = mongoose.model("rating", ratingSchema)
->>>>>>> e8c8a5f559efe5a31cbfa381d97b03273b00b586
 module.exports = Rating
 
 // restaurant_id ref
