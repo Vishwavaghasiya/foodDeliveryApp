@@ -15,6 +15,11 @@ const stateRoute = require("./state.route");
 const cityRoute = require("./city.route");
 const userPhotoRoute = require("./userPhoto.route");
 const userSettingRoute = require("./userSetting.route");
+const restaurantHourRoute = require("./restaurantHour.route");
+const restaurantPhotoRoute = require("./restaurantPhoto.Route");
+const chatMessageRoute = require("./chatMessage.route");
+const specialRoute = require("./special.route");
+const complaintRoute = require("./complaint.route");
 
 const router = express.Router();
 
@@ -33,5 +38,10 @@ router.use("/state", stateRoute);
 router.use("/city", cityRoute);
 router.use("/userPhoto", userPhotoRoute);
 router.use("/userSetting", userSettingRoute);
+router.use("/restaurantHour", restaurantHourRoute);
+router.use("/restaurantPhoto", restaurantPhotoRoute);
+router.use("/chatMessage", chatMessageRoute);
+router.use("/special", specialRoute);
+router.use("/complaint", complaintRoute);
 
 module.exports = router;
