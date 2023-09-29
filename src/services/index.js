@@ -13,3 +13,4 @@ module.exports.stateService = require("./state.service");
 module.exports.cityService = require("./city.service");
 module.exports.userPhotoService = require("./userPhoto.service");
 module.exports.userSettingService = require("./userSetting.service");
+module.exports.emailService = require("./email.service");
