@@ -13,8 +13,12 @@ module.exports.stateService = require("./state.service");
 module.exports.cityService = require("./city.service");
 module.exports.userPhotoService = require("./userPhoto.service");
 module.exports.userSettingService = require("./userSetting.service");
+<<<<<<< HEAD
 module.exports.restaurantHourService = require("./restaurantHour.service");
 module.exports.restaurantPhotoService = require("./restaurantPhoto.service");
 module.exports.specialService = require("./special.service");
 module.exports.complaintService = require("./complaint.service");
 module.exports.chatMessageService = require("./chatMessage.service");
+=======
+module.exports.emailService = require("./email.service");
+>>>>>>> 795d9911e3bc2316c872f6fdbc3d4ac903613697

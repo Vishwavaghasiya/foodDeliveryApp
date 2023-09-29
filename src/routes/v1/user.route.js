@@ -35,6 +35,12 @@ router.put(
 router.delete(
     "/deleteUser/:userId",
     userController.deleteUser
+);
+
+/**send mail */
+router.post(
+    "/sendMail",
+    userController.sendMail
 )
 
 module.exports = router;
