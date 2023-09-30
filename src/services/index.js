@@ -10,7 +10,12 @@ module.exports.menuItemsService = require("./menuItems.service");
 module.exports.reviewService = require("./review.service");
 module.exports.orderService = require("./order.service");
 module.exports.favoriteService = require("./favorite.service");
-
+module.exports.addressService = require("./address.service");
+module.exports.promotionService = require("./promotion.service");
+module.exports.paymentMethodService = require("./paymentMethod.service");
+module.exports.PaymentHistoryService = require("./PaymentHistory.service");
+module.exports.notificationService = require("./notification.service");
+module.exports.categoriesService = require("./categories.service");
 module.exports.countryService = require("./country.service");
 module.exports.stateService = require("./state.service");
 module.exports.cityService = require("./city.service");

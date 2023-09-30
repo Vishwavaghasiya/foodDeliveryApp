@@ -12,9 +12,12 @@ const menuItemsRoute = require("./menuItems.route");
 const reviewRoute = require("./review.route");
 const orderRoute = require("./order.route");
 const favoriteRoute = require("./favorite.route");
-
-
-
+const addressRoute = require("./address.route");
+const promotionRoute = require("./promotion.route");
+const paymentMethodRoute = require("./paymentMethod.route");
+const paymentHistoryRoute = require("./paymentHistoryroute");
+const notificationRoute = require("./notification.route");
+const categoriesRoute = require("./categories.route");
 const countryRoute = require("./country.route");
 const stateRoute = require("./state.route");
 const cityRoute = require("./city.route");
@@ -40,10 +43,12 @@ router.use("/menuItems" , menuItemsRoute);
 router.use("/review" , reviewRoute);
 router.use("/order" , orderRoute);
 router.use("/favorite" , favoriteRoute);
-
-
-
-
+router.use("/address" , addressRoute);
+router.use("/promotion" , promotionRoute);
+router.use("/paymentMethod" , paymentMethodRoute);
+router.use("/paymentHistory" , paymentHistoryRoute);
+router.use("/notification" , notificationRoute);
+router.use("/categories" , categoriesRoute);
 router.use("/country", countryRoute);
 router.use("/state", stateRoute);
 router.use("/city", cityRoute);
