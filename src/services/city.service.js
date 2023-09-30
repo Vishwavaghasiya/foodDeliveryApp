@@ -8,7 +8,7 @@ const createCity = async (reqBody) => {
 
 // Get city list
 const getCityList = async () => {
-  return City.find({$or : [{is_active: true}]})
+  return City.find({ $or: [{ is_active: true }] })
 };
 
 // Get city details by id

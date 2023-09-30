@@ -17,7 +17,7 @@ const getMarketingManagerById = async (marketingManagerId) => {
 
 /**update MarketingManager */
 const updateMarketingManager = async (marketingManagerId, updateBody) => {
-    return MarketingManager.findByIdAndUpdate(marketingManagerId, updateBody);
+    return MarketingManager.findByIdAndUpdate(marketingManagerId, { $set: updateBody });
 }
 
 /**delete MarketingManager */

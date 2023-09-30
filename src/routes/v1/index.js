@@ -10,6 +10,11 @@ const contentCreaterRoute = require("./contentCreater.route");
 const restaurantRoute = require("./restaurant.route");
 const menuItemsRoute = require("./menuItems.route");
 const reviewRoute = require("./review.route");
+const orderRoute = require("./order.route");
+const favoriteRoute = require("./favorite.route");
+
+
+
 const countryRoute = require("./country.route");
 const stateRoute = require("./state.route");
 const cityRoute = require("./city.route");
@@ -28,6 +33,12 @@ router.use("/contentCreater" , contentCreaterRoute);
 router.use("/restaurants" , restaurantRoute);
 router.use("/menuItems" , menuItemsRoute);
 router.use("/review" , reviewRoute);
+router.use("/order" , orderRoute);
+router.use("/favorite" , favoriteRoute);
+
+
+
+
 router.use("/country", countryRoute);
 router.use("/state", stateRoute);
 router.use("/city", cityRoute);

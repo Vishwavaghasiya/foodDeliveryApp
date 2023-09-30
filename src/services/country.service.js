@@ -8,7 +8,7 @@ const createCountry = async (reqBody) => {
 
 // Get country list
 const getCountryList = async () => {
-  return Country.find({$or : [{is_active: true}]})
+  return Country.find({ $or: [{ is_active: true }] })
 };
 
 // Get country details by id

@@ -17,7 +17,7 @@ const getContentCreaterById = async (contentCreaterId) => {
 
 /**update ContentCreater */
 const updateContentCreater = async (contentCreaterId, updateBody) => {
-    return ContentCreater.findByIdAndUpdate(contentCreaterId, updateBody);
+    return ContentCreater.findByIdAndUpdate(contentCreaterId, { $set: updateBody });
 }
 
 /**delete ContentCreater */

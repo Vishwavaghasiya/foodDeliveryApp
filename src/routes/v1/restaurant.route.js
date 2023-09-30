@@ -1,8 +1,7 @@
+const express = require("express");
 const { restaurantValidation } = require("../../validations")
 const validate = require("../../middlewares/validate");
 const { restaurantController } = require("../../controllers");
-
-const express = require("express");
 
 const router = express.Router();
 

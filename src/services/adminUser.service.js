@@ -17,7 +17,7 @@ const getAdminUserById = async (adminUserId) => {
 
 /**update AdminUser */
 const updateAdminUser = async (adminUserId, updateBody) => {
-    return AdminUser.findByIdAndUpdate(adminUserId, updateBody);
+    return AdminUser.findByIdAndUpdate(adminUserId, { $set: updateBody });
 }
 
 /**delete AdminUser */

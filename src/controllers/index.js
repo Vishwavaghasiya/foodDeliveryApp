@@ -8,6 +8,9 @@ module.exports.contentCreaterController = require("./contentCreater.controller")
 module.exports.restaurantController = require("./restaurant.controller");
 module.exports.menuItemsController = require("./menuItems.controller");
 module.exports.reviewController = require("./review.controller");
+module.exports.orderController = require('./orders.controller');
+module.exports.favoriteController = require("./favorite.controller");
+
 module.exports.countryController = require("./country.controller");
 module.exports.stateController = require("./state.controller");
 module.exports.cityController = require("./city.controller");

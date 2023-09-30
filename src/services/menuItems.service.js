@@ -17,7 +17,7 @@ const getMenuItemsById = async (menuItemsId) => {
 
 /**update MenuItems */
 const updateMenuItems = async (menuItemsId, updateBody) => {
-    return MenuItems.findByIdAndUpdate(menuItemsId, updateBody);
+    return MenuItems.findByIdAndUpdate(menuItemsId, { $set: updateBody });
 }
 
 /**delete MenuItems */

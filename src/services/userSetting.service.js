@@ -8,7 +8,7 @@ const createUserSetting = async (reqBody) => {
 
 // Get userSetting list
 const getUserSettingList = async () => {
-  return UserSetting.find({$or : [{is_active: true}]})
+  return UserSetting.find({ $or: [{ is_active: true }] })
 };
 
 // Get userSetting details by id

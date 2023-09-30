@@ -8,7 +8,7 @@ const createState = async (reqBody) => {
 
 // Get state list
 const getStateList = async () => {
-  return State.find({$or : [{is_active: true}]})
+  return State.find({ $or: [{ is_active: true }] })
 };
 
 // Get state details by id

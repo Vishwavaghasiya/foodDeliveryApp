@@ -17,7 +17,7 @@ const getUserById = async (userId) => {
 
 /**update user */
 const updateUser = async (userId, updateBody) => {
-    return User.findByIdAndUpdate(userId, updateBody);
+    return User.findByIdAndUpdate(userId, { $set: updateBody });
 }
 
 /**delete user */

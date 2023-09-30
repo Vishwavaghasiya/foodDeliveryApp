@@ -17,7 +17,7 @@ const getDataAnalysisById = async (dataAnalysisId) => {
 
 /**update DataAnalysis */
 const updateDataAnalysis = async (dataAnalysisId, updateBody) => {
-    return DataAnalysis.findByIdAndUpdate(dataAnalysisId, updateBody);
+    return DataAnalysis.findByIdAndUpdate(dataAnalysisId, { $set: updateBody });
 }
 
 /**delete DataAnalysis */

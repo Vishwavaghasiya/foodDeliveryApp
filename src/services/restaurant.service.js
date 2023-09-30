@@ -17,7 +17,7 @@ const getRestaurantById = async (restaurantId) => {
 
 /**update Restaurant */
 const updateRestaurant = async (restaurantId, updateBody) => {
-    return Restaurant.findByIdAndUpdate(restaurantId, updateBody);
+    return Restaurant.findByIdAndUpdate(restaurantId, { $set: updateBody });
 }
 
 /**delete Restaurant */

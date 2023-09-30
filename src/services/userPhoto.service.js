@@ -8,7 +8,7 @@ const createUserPhoto = async (reqBody) => {
 
 // Get city list
 const getUserPhotoList = async () => {
-  return UserPhoto.find({$or : [{is_active: true}]})
+  return UserPhoto.find({ $or: [{ is_active: true }] })
 };
 
 // Get city details by id

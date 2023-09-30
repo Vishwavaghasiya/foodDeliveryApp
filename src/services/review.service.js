@@ -17,7 +17,7 @@ const getReviewById = async (reviewId) => {
 
 /**update Review */
 const updateReview = async (reviewId, updateBody) => {
-    return Review.findByIdAndUpdate(reviewId, updateBody);
+    return Review.findByIdAndUpdate(reviewId, { $set: updateBody });
 }
 
 /**delete Review */

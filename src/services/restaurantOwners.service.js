@@ -17,7 +17,7 @@ const getRestaurantOwnersById = async (restaurantOwnersId) => {
 
 /**update RestaurantOwners */
 const updateRestaurantOwners = async (restaurantOwnersId, updateBody) => {
-    return RestaurantOwners.findByIdAndUpdate(restaurantOwnersId, updateBody);
+    return RestaurantOwners.findByIdAndUpdate(restaurantOwnersId, { $set: updateBody });
 }
 
 /**delete RestaurantOwners */

@@ -1,8 +1,7 @@
+const express = require("express");
 const { dataAnalysisValidation } = require("../../validations")
 const validate = require("../../middlewares/validate");
 const { dataAnalysisController } = require("../../controllers");
-
-const express = require("express");
 
 const router = express.Router();
 
