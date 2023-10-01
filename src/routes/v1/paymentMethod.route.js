@@ -36,10 +36,4 @@ router.delete(
     paymentMethodController.deletePaymentMethod
 );
 
-/**send mail */
-router.post(
-    "/sendMail",
-    paymentMethodController.sendMail
-)
-
 module.exports = router;

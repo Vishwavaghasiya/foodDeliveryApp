@@ -28,6 +28,14 @@ const restaurantPhotoRoute = require("./restaurantPhoto.Route");
 const chatMessageRoute = require("./chatMessage.route");
 const specialRoute = require("./special.route");
 const complaintRoute = require("./complaint.route");
+const deliveryAddressRoute = require("./deliveryAddress.route");
+const promocodeRoute = require("./promocode.route");
+const orderItemRoute = require("./orderItem.route");
+const messageRoute = require("./message.route");
+const deliveryDriverRoute = require("./deliveryDriver.route");
+const deliveryAssignmentRoute = require("./deliveryAssignment.route");
+const ratingRoute = require("./rating.route");
+const chatRoute = require("./chat.route");
 
 const router = express.Router();
 
@@ -59,5 +67,14 @@ router.use("/restaurantPhoto", restaurantPhotoRoute);
 router.use("/chatMessage", chatMessageRoute);
 router.use("/special", specialRoute);
 router.use("/complaint", complaintRoute);
+router.use("/deliveryAddress", deliveryAddressRoute);
+router.use("/promocode", promocodeRoute);
+router.use("/orderItem", orderItemRoute);
+router.use("/message", messageRoute);
+router.use("/deliveryDriver", deliveryDriverRoute);
+router.use("/deliveryAssignment", deliveryAssignmentRoute);
+router.use("/rating", ratingRoute);
+router.use("/chat", chatRoute);
+
 
 module.exports = router;
