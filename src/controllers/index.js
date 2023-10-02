@@ -1,4 +1,5 @@
 module.exports.userController = require("./user.controller");
+module.exports.tokenController = require("./token.controller");
 module.exports.adminUserController = require("./adminUser.controller");
 module.exports.customerSupportAgentController = require("./customerSupportAgent.controller");
 module.exports.restaurantOwnersController = require("./restaurantOwners.controller");

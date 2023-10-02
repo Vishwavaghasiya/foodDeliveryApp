@@ -1,4 +1,5 @@
 module.exports.User = require("./user.model");
+module.exports.Token = require("./token.model");
 module.exports.AdminUser = require("./adminUser.model");
 module.exports.CustomerSupportAgent = require("./customerSupportAgent.model");
 module.exports.RestaurantOwners = require("./restaurantOwners.model");
