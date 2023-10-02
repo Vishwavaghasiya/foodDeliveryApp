@@ -36,10 +36,4 @@ router.delete(
     promotionController.deletePromotion
 );
 
-/**send mail */
-router.post(
-    "/sendMail",
-    promotionController.sendMail
-)
-
 module.exports = router;
