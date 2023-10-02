@@ -5,34 +5,34 @@ const validate = require("../../middlewares/validate");
 
 const router = express.Router();
 
-// create user
+// create country
 router.post(
-  "/create-user",
+  "/create-country",
   validate(countryValidation.createCountry),
   countryController.createCountry
 );
 
-// Get user list
+// Get country list
 router.get(
   "/list",
   countryController.getCountryList
 );
 
-// Get user details by id
+// Get country details by id
 router.get(
-  "/get-details/:userId",
+  "/get-details/:countryId",
   countryController.getDetails
 );
 
-// user details update by id
+// country details update by id
 router.put(
-  "/update-details/:userId",
+  "/update-details/:countryId",
   countryController.updateDetails
 );
 
-// Delete user
+// Delete country
 router.delete(
-  "/delete-user/:userId",
+  "/delete-country/:countryId",
   countryController.deleteCountry
 );
 

@@ -20,19 +20,19 @@ router.get(
 
 // Get UserPhoto details by id
 router.get(
-  "/get-details/:UserPhotoId",
+  "/get-details/:userPhotoId",
   userPhotoController.getDetails
 );
 
 // UserPhoto details update by id
 router.put(
-  "/update-details/:UserPhotoId",
+  "/update-details/:userPhotoId",
   userPhotoController.updateDetails
 );
 
 // Delete UserPhoto
 router.delete(
-  "/delete-UserPhoto/:UserPhotoId",
+  "/delete-UserPhoto/:userPhotoId",
   userPhotoController.deleteUserPhoto
 );
 

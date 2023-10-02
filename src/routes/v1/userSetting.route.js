@@ -7,7 +7,7 @@ const router = express.Router();
 
 // create usersetting
 router.post(
-  "/create-usersetting",
+  "/create-userSetting",
   validate(userSettingValidation.createUserSetting),
   userSettingController.createUserSetting
 );
@@ -20,19 +20,19 @@ router.get(
 
 // Get usersetting details by id
 router.get(
-  "/get-details/:usersettingId",
+  "/get-details/:userSettingId",
   userSettingController.getDetails
 );
 
 // user setting details update by id
 router.put(
-  "/update-details/:usersettingId",
+  "/update-details/:userSettingId",
   userSettingController.updateDetails
 );
 
 // Delete usersetting
 router.delete(
-  "/delete-usersetting/:usersettingId",
+  "/delete-usersetting/:userSettingId",
   userSettingController.deleteUserSetting
 );
 
