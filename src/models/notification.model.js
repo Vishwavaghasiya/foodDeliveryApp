@@ -3,13 +3,21 @@ const mongoose = require("mongoose");
 /**notification schema */
 const notificationSchema = new mongoose.Schema(
     {
-        notification_id: {
-            type: Number,
-            trim: true
-        },
         user_id: {
-            type: Number,
-            trim: true
+            type: mongoose.Types.ObjectId,
+            ref: "user"
+        },
+        message_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "message"
+        },
+        chat_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "chat"
+        },
+        chatMessage_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "chateMessage"
         },
         content: {
             type: String,

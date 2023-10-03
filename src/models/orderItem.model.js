@@ -3,6 +3,14 @@ const mongoose = require("mongoose");
 /**order item schema */
 const orderItemSchema = new mongoose.Schema(
     {
+        order_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "order"
+        },
+        menu_item_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "menuItems"
+        },
         quantity: {
             type: Number,
             trim: true,
@@ -24,6 +32,3 @@ const orderItemSchema = new mongoose.Schema(
 
 const OrderItem = mongoose.model("orderItem", orderItemSchema);
 module.exports = OrderItem
-
-// order_id ref
-// menu_item_id ref

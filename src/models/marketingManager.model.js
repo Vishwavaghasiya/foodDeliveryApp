@@ -3,13 +3,9 @@ const mongoose = require("mongoose");
 /**Marketing manager schema */
 const marketingManagerSchema = new mongoose.Schema(
     {
-        manager_id: {
-            type: Number,
-            trim: true
-        },
-        user_id: {
-            type: Number,
-            trim: true
+        user: {
+            type: mongoose.Types.ObjectId,
+            ref : "user"
         },
         campaign_name: {
             type: String,

@@ -3,13 +3,9 @@ const mongoose = require("mongoose");
 /**Content creater schema */
 const contentCreaterSchema = new mongoose.Schema(
     {
-        creater_id: {
-            type: Number,
-            trim: true
-        },
         user_id: {
-            type: Number,
-            trim: true
+            type: mongoose.Types.ObjectId,
+            ref : "user"
         },
         content_type: {
             type: String,

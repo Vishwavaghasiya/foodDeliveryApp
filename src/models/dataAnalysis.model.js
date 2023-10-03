@@ -3,13 +3,9 @@ const mongoose = require("mongoose");
 /**Data analysts schema */
 const dataAnalysisSchema = new mongoose.Schema(
     {
-        analyst_id: {
-            type: Number,
-            trim: true
-        },
         user_id: {
-            type: Number,
-            trim: true
+            type: mongoose.Types.ObjectId,
+            ref : "user"
         },
         analyst_project: {
             type: String,

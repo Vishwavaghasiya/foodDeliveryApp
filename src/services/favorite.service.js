@@ -7,7 +7,7 @@ const createFavorite = async (reqBody) => {
 
 /**get favorite list */
 const getFavoriteList = async (req, res) => {
-    return Favorite.find();
+    return Favorite.find().populate("user_id").populate("restaurant_id").populate("menuItems_id");
 }
 
 /**get favorite by id */

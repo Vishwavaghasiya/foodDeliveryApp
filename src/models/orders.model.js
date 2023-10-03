@@ -3,20 +3,16 @@ const mongoose = require("mongoose");
 /**orders schema */
 const ordersSchema = new mongoose.Schema(
     {
-        orders_id: {
-            type: Number,
-            trim: true
-        },
         user_id: {
-            type: Number,
-            trim: true
+            type: mongoose.Types.ObjectId,
+            ref: "user"
         },
         restaurant_id: {
-            type: Number,
-            trim: true
+            type: mongoose.Types.ObjectId,
+            ref: "restaurant"
         },
         total_price: {
-            type: Number,
+            type: String,
             trim: true
         },
         order_date: {

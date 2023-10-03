@@ -8,7 +8,9 @@ const createMessage = async (reqBody) => {
 
 // Get message list
 const getMessageList = async () => {
-  return Message.find({$or : [{is_active: true}]})
+  return Message.find({ $or: [{ is_active: true }] })
+    .populate("sender_id")
+    .populate("receiver_id")
 };
 
 // Get message details by id

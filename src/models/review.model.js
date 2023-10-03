@@ -3,17 +3,13 @@ const mongoose = require("mongoose");
 /**review schema */
 const reviewSchema = new mongoose.Schema(
     {
-        review_id: {
-            type: Number,
-            trim: true
-        },
         user_id: {
-            type: Number,
-            trim: true
+            type: mongoose.Types.ObjectId,
+            ref: "user"
         },
         restaurant_id: {
-            type: Number,
-            trim: true
+            type: mongoose.Types.ObjectId,
+            ref : "restaurant"
         },
         rating: {
             type: Number,

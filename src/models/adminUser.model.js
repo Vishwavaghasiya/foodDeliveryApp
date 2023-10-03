@@ -3,6 +3,10 @@ const mongoose = require("mongoose");
 /**AdminUser schema */
 const adminUserSchema = new mongoose.Schema(
     {
+        user : {
+            type : mongoose.Types.ObjectId,
+            ref : "user"
+        },
         role: {
             type: String,
             trim: true

@@ -7,7 +7,7 @@ const createAdminUser = async (reqBody) => {
 
 /**get AdminUser list */
 const getAdminUserList = async (req, res) => {
-    return AdminUser.find();
+    return AdminUser.find().populate("user");
 }
 
 /**get AdminUser details by id */

@@ -3,13 +3,25 @@ const mongoose = require("mongoose");
 /**promotion schema */
 const promotionSchema = new mongoose.Schema(
     {
-        promotion_id: {
-            type: Number,
-            trim: true
-        },
         restaurant_id: {
-            type: Number,
-            trim: true
+            type: mongoose.Types.ObjectId,
+            ref: "restaurant"
+        },
+        marketingManager_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "marketingManager"
+        },
+        deliveryDriver_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "deliveryDriver"
+        },
+        customerSupportAgent_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "customerSupportAgent"
+        },
+        contentCreater_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "contentCreater"
         },
         description: {
             type: String,

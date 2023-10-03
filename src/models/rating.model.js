@@ -3,6 +3,14 @@ const mongoose = require("mongoose");
 /**rating schema */
 const ratingSchema = new mongoose.Schema(
     {
+        user_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "user"
+        },
+        restaurant_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "restaurant"
+        },
         rating: {
             type: Number,
             trim: true,
@@ -24,6 +32,3 @@ const ratingSchema = new mongoose.Schema(
 
 const Rating = mongoose.model("rating", ratingSchema);
 module.exports = Rating
-
-// restaurant_id ref
-// user_id ref

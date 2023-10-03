@@ -3,13 +3,13 @@ const mongoose = require("mongoose");
 /**paymentMethod schema */
 const paymentMethodSchema = new mongoose.Schema(
     {
-        payment_method_id: {
-            type: Number,
-            trim: true
-        },
         user_id: {
-            type: Number,
-            trim: true
+            type: mongoose.Types.ObjectId,
+            ref: "user"
+        },
+        payment_history: {
+            type: mongoose.Types.ObjectId,
+            ref: "paymentHistory"
         },
         card_number: {
             type: String,

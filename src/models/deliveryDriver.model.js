@@ -3,6 +3,10 @@ const mongoose = require("mongoose");
 /**delivery driver schema */
 const deliveryDriversSchema = new mongoose.Schema(
     {
+        user_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "user"
+        },
         vehicle_number: {
             type: String,
             trim: true,

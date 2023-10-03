@@ -7,7 +7,7 @@ const createOrder = async (reqBody) => {
 
 /**get order list */
 const getOrderList = async (req, res) => {
-    return Orders.find();
+    return Orders.find().populate("user_id").populate("restaurant_id");
 }
 
 /**get order by id */

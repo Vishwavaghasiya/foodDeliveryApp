@@ -3,7 +3,15 @@ const mongoose = require("mongoose");
 /**chat schema */
 const chatSchema = new mongoose.Schema(
     {
+        user_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "user"
+        },
         sender: {
+            type: String,
+            trim: true
+        },
+        reciever: {
             type: String,
             trim: true
         },
@@ -28,6 +36,3 @@ const chatSchema = new mongoose.Schema(
 
 const Chat = mongoose.model("chat", chatSchema);
 module.exports = Chat
-
-// user_id ref user1
-// user_id ref user2

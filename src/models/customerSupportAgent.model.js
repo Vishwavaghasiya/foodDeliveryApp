@@ -3,13 +3,9 @@ const mongoose = require("mongoose");
 /**customer support agent schema */
 const customerSupportAgent = new mongoose.Schema(
     {
-        agent_id: {
-            type: Number,
-            trim: true
-        },
-        user_id: {
-            type: Number,
-            trim: true
+        user: {
+            type: mongoose.Types.ObjectId,
+            ref: "user"
         },
         department: {
             type: String,

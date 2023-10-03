@@ -7,7 +7,7 @@ const createReview = async (reqBody) => {
 
 /**get Review list */
 const getReviewList = async (req, res) => {
-    return Review.find();
+    return Review.find().populate("user_id").populate("restaurant_id");
 }
 
 /**get Review details by id */

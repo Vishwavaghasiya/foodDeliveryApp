@@ -1,6 +1,6 @@
 const { chatService } = require("../services");
 
-// create chat
+/** create chat*/
 const createChat = async (req, res) => {
   try {
     const reqBody = req.body;
@@ -19,7 +19,7 @@ const createChat = async (req, res) => {
   }
 };
 
-// Get chat list
+/** Get chat list*/
 const getChatList = async (req, res) => {
   try {
     const { search, ...options } = req.query;
@@ -44,7 +44,7 @@ const getChatList = async (req, res) => {
   }
 };
 
-// Get chat details by id
+/** Get chat details by id*/
 const getDetails = async (req, res) => {
   try {
     const getDetails = await chatService.getChatById(req.params.chatId);
@@ -62,7 +62,7 @@ const getDetails = async (req, res) => {
   }
 };
 
-// chat details update by id
+/** chat details update by id*/
 const updateDetails = async (req, res) => {
   try {
     const chatId = req.params.chatId;
@@ -81,7 +81,7 @@ const updateDetails = async (req, res) => {
   }
 };
 
-// Delete chat by id
+/** Delete chat by id*/
 const deleteChat = async (req, res) => {
   try {
     const chatId = req.params.chatId;
