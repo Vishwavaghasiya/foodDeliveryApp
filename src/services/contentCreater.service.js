@@ -7,7 +7,7 @@ const createContentCreater = async (reqBody) => {
 
 /**get ContentCreater list */
 const getContentCreaterList = async (req, res) => {
-    return ContentCreater.find();
+    return ContentCreater.find().populate("user_id");
 }
 
 /**get ContentCreater details by id */

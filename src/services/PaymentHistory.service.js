@@ -7,7 +7,10 @@ const createPaymentHistory = async (reqBody) => {
 
 /**get PaymentHistory list */
 const getPaymentHistoryList = async (req, res) => {
-    return PaymentHistory.find();
+    return PaymentHistory.find()
+        .populate("user_id")
+        .populate("order_id")
+        .populate("paymentMethod_id");
 }
 
 /**get PaymentHistory details by id */

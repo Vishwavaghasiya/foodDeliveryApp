@@ -1,27 +1,27 @@
 const { DeliveryDriver } = require("../models");
 
-
-// Create deliveryDriver
+/**Create deliveryDriver */
 const createDeliveryDriver = async (reqBody) => {
   return DeliveryDriver.create(reqBody);
 };
 
-// Get deliveryDriver list
+/**Get deliveryDriver list */
 const getDeliveryDriverList = async () => {
-  return DeliveryDriver.find({$or : [{is_active: true}]})
+  return DeliveryDriver.find({ $or: [{ is_active: true }] })
+    .populate("user_id")
 };
 
-// Get deliveryDriver details by id
+/**Get deliveryDriver details by id */
 const getDeliveryDriverById = async (deliveryDriverId) => {
   return DeliveryDriver.findById(deliveryDriverId);
 };
 
-// deliveryDriver details update by id
+/**deliveryDriver details update by id */
 const updateDetails = async (deliveryDriverId, updateBody) => {
   return DeliveryDriver.findByIdAndUpdate(deliveryDriverId, { $set: updateBody });
 };
 
-// Delete deliveryDriver
+/**Delete deliveryDriver */
 const deleteDeliveryDriver = async (deliveryDriverId) => {
   return DeliveryDriver.findByIdAndDelete(deliveryDriverId);
 };

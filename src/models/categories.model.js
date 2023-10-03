@@ -3,9 +3,9 @@ const mongoose = require("mongoose");
 /**categories schema */
 const categoriesSchema = new mongoose.Schema(
     {
-        categories_id: {
-            type: Number,
-            trim: true
+        menuItems_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "menuItems"
         },
         name: {
             type: String,

@@ -3,17 +3,13 @@ const mongoose = require("mongoose");
 /**menuItems schema */
 const menuItemsSchema = new mongoose.Schema(
     {
-        item_id: {
-            type: Number,
-            trim: true
-        },
         category_id: {
-            type: Number,
-            trim: true
+            type: mongoose.Types.ObjectId,
+            ref : "categories"
         },
         restaurant_id: {
-            type: Number,
-            trim: true
+            type: mongoose.Types.ObjectId,
+            ref : "restaurant"
         },
         name: {
             type: String,

@@ -1,6 +1,5 @@
 const { Chat } = require("../models");
 
-
 // Create chat
 const createChat = async (reqBody) => {
   return Chat.create(reqBody);
@@ -8,7 +7,8 @@ const createChat = async (reqBody) => {
 
 // Get chat list
 const getChatList = async () => {
-  return Chat.find({$or : [{is_active: true}]})
+  return Chat.find({ $or: [{ is_active: true }] })
+    .populate("user_id")
 };
 
 // Get chat details by id

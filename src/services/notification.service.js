@@ -7,7 +7,11 @@ const createNotification = async (reqBody) => {
 
 /**get Notification list */
 const getNotificationList = async (req, res) => {
-    return Notification.find();
+    return Notification.find()
+        .populate("user_id")
+        .populate("message_id")
+        .populate("chat_id")
+        .populate("chatMessage_id");
 }
 
 /**get Notification details by id */

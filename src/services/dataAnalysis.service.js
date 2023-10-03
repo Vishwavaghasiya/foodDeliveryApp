@@ -7,7 +7,7 @@ const createDataAnalysis = async (reqBody) => {
 
 /**get DataAnalysis list */
 const getDataAnalysisList = async (req, res) => {
-    return DataAnalysis.find();
+    return DataAnalysis.find().populate("user_id");
 }
 
 /**get DataAnalysis details by id */

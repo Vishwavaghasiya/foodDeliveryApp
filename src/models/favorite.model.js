@@ -3,16 +3,20 @@ const mongoose = require("mongoose");
 /**favorite schema */
 const favoriteSchema = new mongoose.Schema(
     {
-        favorite_id: {
-            type: Number,
-            trim: true
-        },
         user_id: {
-            type: Number,
-            trim: true
+            type: mongoose.Types.ObjectId,
+            ref: "user"
         },
         restaurant_id: {
-            type: Number,
+            type: mongoose.Types.ObjectId,
+            ref: "restaurant"
+        },
+        menuItems_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "menuItems"
+        },
+        favItem_name: {
+            type: String,
             trim: true
         },
         is_active: {

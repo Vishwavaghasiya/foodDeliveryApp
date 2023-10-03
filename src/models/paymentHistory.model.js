@@ -3,17 +3,17 @@ const mongoose = require("mongoose");
 /**paymentHistory schema */
 const paymentHistorySchema = new mongoose.Schema(
     {
-        payment_history_id: {
-            type: Number,
-            trim: true
-        },
         user_id: {
-            type: Number,
-            trim: true
+            type: mongoose.Types.ObjectId,
+            ref: "user"
         },
         order_id: {
-            type: Number,
-            trim: true
+            type: mongoose.Types.ObjectId,
+            ref: "order"
+        },
+        paymentMethod_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "paymentMethod"
         },
         amount: {
             type: Number,

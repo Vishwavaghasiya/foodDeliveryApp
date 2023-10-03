@@ -1,6 +1,5 @@
 const { Special } = require("../models");
 
-
 // Create special
 const createSpecial = async (reqBody) => {
   return Special.create(reqBody);

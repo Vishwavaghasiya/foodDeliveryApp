@@ -3,13 +3,9 @@ const mongoose = require("mongoose");
 /**address schema */
 const addressSchema = new mongoose.Schema(
     {
-        address_id: {
-            type: Number,
-            trim: true
-        },
         user_id: {
-            type: Number,
-            trim: true
+            type: mongoose.Types.ObjectId,
+            ref : "user"
         },
         address_line: {
             type: String,

@@ -1,35 +1,36 @@
-const { Special } = require("../models");
+const { Rating } = require("../models");
 
-
-// Create special
-const createSpecial = async (reqBody) => {
-  return Special.create(reqBody);
+/**Create Rating */
+const createRating = async (reqBody) => {
+  return Rating.create(reqBody);
 };
 
-// Get special list
-const getSpecialList = async () => {
-  return Special.find({$or : [{is_active: true}]})
+/**Get Rating list */
+const getRatingList = async () => {
+  return Rating.find({ $or: [{ is_active: true }] })
+    .populate("user_id")
+    .populate("restaurant_id")
 };
 
-// Get special details by id
-const getSpecialById = async (specialId) => {
-  return Special.findById(specialId);
+/**Get Rating details by id */
+const getRatingById = async (ratingId) => {
+  return Rating.findById(ratingId);
 };
 
-// special details update by id
-const updateDetails = async (specialId, updateBody) => {
-  return Special.findByIdAndUpdate(specialId, { $set: updateBody });
+/**Rating details update by id */
+const updateDetails = async (ratingId, updateBody) => {
+  return Rating.findByIdAndUpdate(ratingId, { $set: updateBody });
 };
 
-// Delete special
-const deleteSpecial = async (specialId) => {
-  return Special.findByIdAndDelete(specialId);
+/**Delete Rating */
+const deleteRating = async (ratingId) => {
+  return Rating.findByIdAndDelete(ratingId);
 };
 
 module.exports = {
-  createSpecial,
-  getSpecialList,
-  getSpecialById,
+  createRating,
+  getRatingList,
+  getRatingById,
   updateDetails,
-  deleteSpecial,
+  deleteRating,
 };

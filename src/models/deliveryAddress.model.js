@@ -3,6 +3,14 @@ const mongoose = require("mongoose");
 /**deliveryAddress model */
 const deliveryAddressSchema = new mongoose.Schema(
     {
+        delieverDrivery_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "delieveryDriver"
+        },
+        user_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "user"
+        },
         address_line1: {
             type: String,
             trim: true,

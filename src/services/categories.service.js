@@ -7,7 +7,8 @@ const createCategories = async (reqBody) => {
 
 /**get Categories list */
 const getCategoriesList = async (req, res) => {
-    return Categories.find();
+    return Categories.find()
+        .populate("menuItems_id");
 }
 
 /**get Categories details by id */

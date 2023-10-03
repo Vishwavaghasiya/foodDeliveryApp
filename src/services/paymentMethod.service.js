@@ -7,7 +7,9 @@ const createPaymentMethods = async (reqBody) => {
 
 /**get PaymentMethods list */
 const getPaymentMethodsList = async (req, res) => {
-    return PaymentMethods.find();
+    return PaymentMethods.find()
+        .populate("user_id")
+        .populate("payment_history");
 }
 
 /**get PaymentMethods details by id */

@@ -3,6 +3,14 @@ const mongoose = require("mongoose");
 /**chat message schema */
 const chatMessageSchema = new mongoose.Schema(
     {
+        sender_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "chat"
+        },
+        reciever_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "chat"
+        },
         content: {
             type: String,
             trim: true,
@@ -24,6 +32,3 @@ const chatMessageSchema = new mongoose.Schema(
 
 const ChatMessage = mongoose.model("chatMessage", chatMessageSchema);
 module.exports = ChatMessage
-
-// chat_id ref
-// user_id ref

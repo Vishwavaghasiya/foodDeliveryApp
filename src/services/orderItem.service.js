@@ -8,7 +8,9 @@ const createOrderItem = async (reqBody) => {
 
 // Get orderItem list
 const getOrderItemList = async () => {
-  return OrderItem.find({$or : [{is_active: true}]})
+  return OrderItem.find({ $or: [{ is_active: true }] })
+    .populate("order_id")
+    .populate("menu_item_id")
 };
 
 // Get orderItem details by id

@@ -7,7 +7,7 @@ const createAddress = async (reqBody) => {
 
 /**get Address list */
 const getAddressList = async (req, res) => {
-    return Address.find();
+    return Address.find().populate("user_id");
 }
 
 /**get Address details by id */

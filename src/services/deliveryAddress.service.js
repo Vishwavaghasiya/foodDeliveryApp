@@ -8,7 +8,9 @@ const createDeliveryAddress = async (reqBody) => {
 
 // Get deliveryAddress list
 const getDeliveryAddressList = async () => {
-  return DeliveryAddress.find({$or : [{is_active: true}]})
+  return DeliveryAddress.find({ $or: [{ is_active: true }] })
+    .populate("delieveryDriver_id")
+    .populate("user_id")
 };
 
 // Get deliveryAddress details by id
