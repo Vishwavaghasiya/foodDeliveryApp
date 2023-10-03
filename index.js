@@ -10,8 +10,10 @@ const path = require("path")
 
 const app = express();
 
+/** Allow form-data from body */
 app.use(bodyParser.urlencoded({ extended: false }));
 
+/** Allow json data from body */
 app.use(bodyParser.json());
 
 /** enable cors */
@@ -24,6 +26,7 @@ app.use(express.static(path.join(__dirname, `./public`)));
 /** Routes with Namespace (/v1) */
 app.use("/v1", routes);
 
+/** If rounte not found then show error */
 app.use((req, res, next) => {
   next(new Error("Route not found!"));
 });
@@ -35,5 +38,5 @@ const server = http.createServer(app);
 connectDB();
 
 server.listen(config.port, () => {
-  console.log("server listning port number 3000!");
+  console.log(`Server listing port number ${config.port}`);
 });

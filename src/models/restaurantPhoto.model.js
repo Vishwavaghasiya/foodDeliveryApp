@@ -18,6 +18,13 @@ const restaurantPhotoSchema = new mongoose.Schema(
     {
         timestamps: true,
         versionKey: false,
+        toJSON: {
+            transform: function (doc, data) {
+              if (data?.resaturant_image) {
+                data.restaurant_image = `${config.base_url}restaurant_images/${data.restaurant_image}`;
+              }
+            },
+          },
     }
 );
 

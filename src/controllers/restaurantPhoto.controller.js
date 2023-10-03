@@ -4,15 +4,19 @@ const { restaurantPhotoService } = require("../services");
 const createRestaurantPhoto = async (req, res) => {
   try {
     const reqBody = req.body;
-    const restaurantPhoto = await restaurantPhotoService.createRestaurantPhoto(reqBody);
-    if (!restaurantPhoto) {
-      throw new Error("oppsss!..., seems like something went wrong, please try again later");
+
+    if (req.file) {
+      reqBody.restaurant_image = req.file.filename;
+    } else {
+      throw new Error("restaurant image is required!");
     }
+
+    const restaurantPhoto = await restaurantPhotoService.createRestaurantPhoto(reqBody);
 
     res.status(200).json({
       success: true,
-      message: "New record added to the database!",
-      data: { restaurantPhoto },
+      message: "New image added to the database!",
+      data: restaurantPhoto,
     });
   } catch (error) {
     res.status(400).json({ success: false, message: error.message });
