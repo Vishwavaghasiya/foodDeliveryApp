@@ -2,12 +2,14 @@ const express = require("express");
 const { userValidation } = require("../../validations")
 const validate = require("../../middlewares/validate");
 const { userController } = require("../../controllers");
+const auth = require("../../middlewares/auth");
 
 const router = express.Router();
 
 /**create user */
 router.post(
     "/createUser",
+    auth(),
     validate(userValidation.createUser),
     userController.createUser
 );

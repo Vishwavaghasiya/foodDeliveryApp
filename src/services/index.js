@@ -1,4 +1,5 @@
 module.exports.userService = require("./user.service");
+module.exports.tokenService = require("./token.service");
 module.exports.adminUserService = require("./adminUser.service");
 module.exports.customerSupportAgentService = require("./customerSupportAgent.service");
 module.exports.restaurantOwnersService = require("./restaurantOwners.service");

@@ -1,6 +1,7 @@
 const express = require("express");
 
 const userRoute = require("./user.route");
+const tokenRoute = require("./token.route");
 const adminUserRoute = require("./adminUser.route");
 const customerSupportAgentRoute = require("./customerSupportAgent.route");
 const restaurantOwnersRoute = require("./restaurantOwners.route");
@@ -40,6 +41,7 @@ const chatRoute = require("./chat.route");
 const router = express.Router();
 
 router.use("/user", userRoute);
+router.use("/token", tokenRoute);
 router.use("/adminUser" , adminUserRoute);
 router.use("/customerSupportAgent" , customerSupportAgentRoute);
 router.use("/restaurantOwners", restaurantOwnersRoute);
