@@ -4,10 +4,14 @@ const { userPhotoService } = require("../services");
 const createUserPhoto = async (req, res) => {
   try {
     const reqBody = req.body;
-    const userPhoto = await userPhotoService.createUserPhoto(reqBody);
-    if (!userPhoto) {
-      throw new Error("oppsss!..., seems like something went wrong, please try again later");
+
+    if (req.file) {
+      reqBody.userPhoto_image = req.file.filename;
+    } else {
+      throw new Error("User image is required!");
     }
+
+    const userPhoto = await userPhotoService.createUserPhoto(reqBody);
 
     res.status(200).json({
       success: true,

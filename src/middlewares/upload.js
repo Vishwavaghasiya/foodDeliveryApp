@@ -5,11 +5,11 @@ const path = require("path");
 /** Image upload using disk storage */
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    if (file.fieldname == "restaurant_image") {
-      fs.mkdirSync(path.join(__dirname, "../public/restaurant_images"), {
+    if (file.fieldname == "restaurantPhoto_image") {
+      fs.mkdirSync(path.join(__dirname, "../public/restaurantPhoto_images"), {
         recursive: true,
       });
-      cb(null, path.join(__dirname, "../public/restaurant_images"));
+      cb(null, path.join(__dirname, "../public/restaurantPhoto_images"));
     }
   },
 
