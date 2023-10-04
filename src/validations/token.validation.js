@@ -2,7 +2,7 @@ const Joi = require("joi");
 
 // Create token
 const generateToken = {
-  body: Joi.object({
+  body: Joi.object().keys({
     user: Joi.string().required().trim(),
   }),
 };
