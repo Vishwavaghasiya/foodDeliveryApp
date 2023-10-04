@@ -2,12 +2,16 @@ const express = require("express");
 const { restaurantPhotoValidation } = require("../../validations");
 const { restaurantPhotoController } = require("../../controllers");
 const validate = require("../../middlewares/validate");
+const auth = require("../../middlewares/auth")
+const upload = require("../../middlewares/upload")
 
 const router = express.Router();
 
 // create restaurantPhoto
 router.post(
   "/create-restaurantPhoto",
+  auth(),
+  upload.single("restaurant_image"),
   validate(restaurantPhotoValidation.createRestaurantPhoto),
   restaurantPhotoController.createRestaurantPhoto
 );
