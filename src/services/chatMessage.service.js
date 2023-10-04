@@ -8,8 +8,14 @@ const createChatMessage = async (reqBody) => {
 /**Get chatMessage list */
 const getChatMessageList = async () => {
   return ChatMessage.find({ $or: [{ is_active: true }] })
-    .populate("sender_id")
-    .populate("reciever_id")
+    .populate({
+      path: "chat_id",
+      select: "sender , reciever"
+    })
+    .populate({
+      path: "user_id",
+      select: "user_name , email"
+    })
 };
 
 /**Get chatMessage details by id */

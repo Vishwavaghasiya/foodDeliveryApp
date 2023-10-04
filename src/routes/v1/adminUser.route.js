@@ -1,4 +1,4 @@
-    const express = require("express");
+const express = require("express");
 const { adminUserValidation } = require("../../validations")
 const validate = require("../../middlewares/validate");
 const { adminUserController } = require("../../controllers");

@@ -8,10 +8,22 @@ const createNotification = async (reqBody) => {
 /**get Notification list */
 const getNotificationList = async (req, res) => {
     return Notification.find()
-        .populate("user_id")
-        .populate("message_id")
-        .populate("chat_id")
-        .populate("chatMessage_id");
+        .populate({
+            path: "user_id",
+            select: "user_name"
+        })
+        .populate({
+            path: "message_id",
+            select: "content"
+        })
+        .populate({
+            path: "chat_id",
+            select: "sender , reciever"
+        })
+        .populate({
+            path: "chatMessage_id",
+            select: "content"
+        });
 }
 
 /**get Notification details by id */

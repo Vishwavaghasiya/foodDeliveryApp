@@ -3,7 +3,7 @@ const { restaurantPhotoValidation } = require("../../validations");
 const { restaurantPhotoController } = require("../../controllers");
 const validate = require("../../middlewares/validate");
 const auth = require("../../middlewares/auth")
-const upload = require("../../middlewares/upload")
+const { upload } = require("../../middlewares/upload")
 
 const router = express.Router();
 

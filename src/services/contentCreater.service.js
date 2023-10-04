@@ -7,7 +7,11 @@ const createContentCreater = async (reqBody) => {
 
 /**get ContentCreater list */
 const getContentCreaterList = async (req, res) => {
-    return ContentCreater.find().populate("user_id");
+    return ContentCreater.find()
+        .populate({
+            path: "user_id",
+            select: "user_name, profile_info"
+        });
 }
 
 /**get ContentCreater details by id */
