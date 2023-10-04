@@ -7,7 +7,19 @@ const createFavorite = async (reqBody) => {
 
 /**get favorite list */
 const getFavoriteList = async (req, res) => {
-    return Favorite.find().populate("user_id").populate("restaurant_id").populate("menuItems_id");
+    return Favorite.find()
+        .populate({
+            path: "user_id",
+            select: "user_name , preferences"
+        })
+        .populate({
+            path: "restaurant_id",
+            select: "name , location"
+        })
+        .populate({
+            path: "menuItems_id",
+            select: "name , price"
+        });
 }
 
 /**get favorite by id */

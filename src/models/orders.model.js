@@ -12,7 +12,7 @@ const ordersSchema = new mongoose.Schema(
             ref: "restaurant"
         },
         total_price: {
-            type: String,
+            type: Number,
             trim: true
         },
         order_date: {
