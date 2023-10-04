@@ -6,9 +6,9 @@ const createRestaurantPhoto = async (req, res) => {
     const reqBody = req.body;
 
     if (req.file) {
-      reqBody.restaurant_image = req.file.filename;
+      reqBody.restaurantPhoto_image = req.file.filename;
     } else {
-      throw new Error("restaurant image is required!");
+      throw new Error("Restaurant image is required!");
     }
 
     const restaurantPhoto = await restaurantPhotoService.createRestaurantPhoto(reqBody);

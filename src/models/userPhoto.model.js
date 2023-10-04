@@ -19,6 +19,13 @@ const userPhotoSchema = new mongoose.Schema(
     {
         timestamps: true,
         versionKey: false,
+        toJSON: {
+            transform: function (doc, data) {
+                if (data?.userPhoto_image) {
+                    data.userPhoto_image = `${config.base_url}userPhoto_images/${data.userPhoto_image}`;
+                }
+            },
+        },
     }
 );
 
