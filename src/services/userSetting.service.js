@@ -1,14 +1,17 @@
 const { UserSetting } = require("../models");
 
-
-/** Create userSetting */
+// Create userSetting
 const createUserSetting = async (reqBody) => {
   return UserSetting.create(reqBody);
 };
 
 /** Get userSetting list */
 const getUserSettingList = async () => {
-  return UserSetting.find({ $or: [{ is_active: true }] })
+  return UserSetting.findOne({ $or: [{ is_active: true }] })
+    .populate({
+      path: "user_id",
+      select: "user_name , email"
+    })
 };
 
 /** Get userSetting details by id */

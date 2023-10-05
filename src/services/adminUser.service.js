@@ -7,7 +7,11 @@ const createAdminUser = async (reqBody) => {
 
 /**get AdminUser list */
 const getAdminUserList = async (req, res) => {
-    return AdminUser.find().populate("user");
+    return AdminUser.findOne()
+        .populate({
+            path: "user_id",
+            select: "user_name , email , profile_info"
+        });
 }
 
 /**get AdminUser details by id */

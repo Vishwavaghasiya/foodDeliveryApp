@@ -3,6 +3,10 @@ const mongoose = require("mongoose");
 /**user setting schema */
 const userSettingSchema = new mongoose.Schema(
     {
+        user_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "user"
+        },
         email_notifications: {
             type: Boolean,
             trim: true,
@@ -36,5 +40,3 @@ const userSettingSchema = new mongoose.Schema(
 
 const UserSetting = mongoose.model("userSetting", userSettingSchema);
 module.exports = UserSetting
-
-// user_id ref

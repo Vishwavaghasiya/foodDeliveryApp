@@ -1,7 +1,6 @@
 const { Message } = require("../models");
 
-
-/** Create message */
+// Create message
 const createMessage = async (reqBody) => {
   return Message.create(reqBody);
 };
@@ -9,8 +8,14 @@ const createMessage = async (reqBody) => {
 /** Get message list */
 const getMessageList = async () => {
   return Message.find({ $or: [{ is_active: true }] })
-    .populate("sender_id")
-    .populate("receiver_id")
+    .populate({
+      path: "chat_id",
+      select: "sender , reciever"
+    })
+    .populate({
+      path: "user_id",
+      select: "user_name , email"
+    })
 };
 
 /** Get message details by id */

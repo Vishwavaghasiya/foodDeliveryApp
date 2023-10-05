@@ -1,7 +1,6 @@
 const { DeliveryAddress } = require("../models");
 
-
-/** Create deliveryAddress */
+// Create deliveryAddress
 const createDeliveryAddress = async (reqBody) => {
   return DeliveryAddress.create(reqBody);
 };
@@ -9,8 +8,14 @@ const createDeliveryAddress = async (reqBody) => {
 /** Get deliveryAddress list */
 const getDeliveryAddressList = async () => {
   return DeliveryAddress.find({ $or: [{ is_active: true }] })
-    .populate("delieveryDriver_id")
-    .populate("user_id")
+    .populate({
+      path: "delieveryDriver_id",
+      select: "vehicle_number , license_number"
+    })
+    .populate({
+      path: "user_id",
+      select: "user_name"
+    })
 };
 
 /** Get deliveryAddress details by id */

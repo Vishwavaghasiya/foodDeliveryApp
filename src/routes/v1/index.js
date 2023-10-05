@@ -72,9 +72,8 @@ const paymentHistoryRoute = require("./paymentHistoryroute");
 const userPhotoRoute = require("./userPhoto.route");
 const restaurantPhotoRoute = require("./restaurantPhoto.Route");
 
-
-
 const router = express.Router();
+
 /* -------------------------------------------------------------------------- */
 /*                                    USERS                                   */
 /* -------------------------------------------------------------------------- */
