@@ -17,6 +17,7 @@ const countrySchema = new mongoose.Schema(
         },
         currency: {
             type: String,
+            trim: true
         },
         created_at: {
             type: Date,

@@ -19,6 +19,10 @@ const userSchema = new mongoose.Schema(
             type: String,
             trim: true
         },
+        address: {
+            type: String,
+            trim: true
+        },
         profile_info: {
             type: String,
             trim: true

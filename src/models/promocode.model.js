@@ -3,6 +3,14 @@ const mongoose = require("mongoose");
 /**promocode schema */
 const promocodeSchema = new mongoose.Schema(
     {
+        restaurant_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "restaurant"
+        },
+        menuItem_id:{
+            type: mongoose.Types.ObjectId,
+            ref: "menuItems"
+        },
         code: {
             type: Number,
             trim: true,

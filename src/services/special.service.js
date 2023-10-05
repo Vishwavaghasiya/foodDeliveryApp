@@ -7,7 +7,11 @@ const createSpecial = async (reqBody) => {
 
 // Get special list
 const getSpecialList = async () => {
-  return Special.find({$or : [{is_active: true}]})
+  return Special.find({ $or: [{ is_active: true }] })
+    .populate({
+      path: "restaurant_id",
+      select: "name"
+    })
 };
 
 // Get special details by id

@@ -3,6 +3,10 @@ const mongoose = require("mongoose");
 /**special schema */
 const specialSchema = new mongoose.Schema(
     {
+        restaurant_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "restaurant"
+        },
         dish_name: {
             type: String,
             trim: true,

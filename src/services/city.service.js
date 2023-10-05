@@ -9,6 +9,14 @@ const createCity = async (reqBody) => {
 // Get city list
 const getCityList = async () => {
   return City.find({ $or: [{ is_active: true }] })
+    .populate({
+      path: "country_id",
+      select: "country_name , currency"
+    })
+    .populate({
+      path: "state_id",
+      select: "State_name"
+    })
 };
 
 // Get city details by id

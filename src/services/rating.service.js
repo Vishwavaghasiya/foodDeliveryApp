@@ -8,8 +8,14 @@ const createRating = async (reqBody) => {
 /**Get Rating list */
 const getRatingList = async () => {
   return Rating.find({ $or: [{ is_active: true }] })
-    .populate("user_id")
-    .populate("restaurant_id")
+    .populate({
+      path: "user_id",
+      select: "user_name"
+    })
+    .populate({
+      path: "restaurant_id",
+      select: "name , location"
+    })
 };
 
 /**Get Rating details by id */

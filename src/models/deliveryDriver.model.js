@@ -11,6 +11,10 @@ const deliveryDriversSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
+        name: {
+            type: String,
+            trim: true
+        },
         license_number: {
             type: String,
             trim: true,
@@ -28,5 +32,3 @@ const deliveryDriversSchema = new mongoose.Schema(
 
 const DeliveryDrivers = mongoose.model("deliveryDrivers", deliveryDriversSchema);
 module.exports = DeliveryDrivers
-
-// user_id ref

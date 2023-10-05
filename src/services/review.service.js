@@ -7,7 +7,15 @@ const createReview = async (reqBody) => {
 
 /**get Review list */
 const getReviewList = async (req, res) => {
-    return Review.find().populate("user_id").populate("restaurant_id");
+    return Review.find()
+        .populate({
+            path: "user_id",
+            select: "user_name , preferences"
+        })
+        .populate({
+            path: "restaurant_id",
+            select: "name"
+        });
 }
 
 /**get Review details by id */

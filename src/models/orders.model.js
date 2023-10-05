@@ -11,6 +11,10 @@ const ordersSchema = new mongoose.Schema(
             type: mongoose.Types.ObjectId,
             ref: "restaurant"
         },
+        name: {
+            type: String,
+            trim: true
+        },
         total_price: {
             type: Number,
             trim: true
