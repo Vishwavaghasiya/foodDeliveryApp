@@ -1,29 +1,29 @@
 const { DeliveryAddress } = require("../models");
 
 
-// Create deliveryAddress
+/** Create deliveryAddress */
 const createDeliveryAddress = async (reqBody) => {
   return DeliveryAddress.create(reqBody);
 };
 
-// Get deliveryAddress list
+/** Get deliveryAddress list */
 const getDeliveryAddressList = async () => {
   return DeliveryAddress.find({ $or: [{ is_active: true }] })
     .populate("delieveryDriver_id")
     .populate("user_id")
 };
 
-// Get deliveryAddress details by id
+/** Get deliveryAddress details by id */
 const getDeliveryAddressById = async (deliveryAddressId) => {
   return DeliveryAddress.findById(deliveryAddressId);
 };
 
-// deliveryAddress details update by id
+/** deliveryAddress details update by id */
 const updateDetails = async (deliveryAddressId, updateBody) => {
   return DeliveryAddress.findByIdAndUpdate(deliveryAddressId, { $set: updateBody });
 };
 
-// Delete deliveryAddress
+/** Delete deliveryAddress */
 const deleteDeliveryAddress = async (deliveryAddressId) => {
   return DeliveryAddress.findByIdAndDelete(deliveryAddressId);
 };

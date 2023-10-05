@@ -5,32 +5,32 @@ const validate = require("../../middlewares/validate");
 
 const router = express.Router();
 
-// create usersetting
+/** create usersetting */
 router.post(
   "/create-userSetting",
   validate(userSettingValidation.createUserSetting),
   userSettingController.createUserSetting
 );
 
-// Get usersetting list
+/** Get usersetting list */
 router.get(
   "/list",
   userSettingController.getUserSettingList
 );
 
-// Get usersetting details by id
+/** Get usersetting details by id */
 router.get(
   "/get-details/:userSettingId",
   userSettingController.getDetails
 );
 
-// user setting details update by id
+/** user setting details update by id */
 router.put(
   "/update-details/:userSettingId",
   userSettingController.updateDetails
 );
 
-// Delete usersetting
+/** Delete usersetting */
 router.delete(
   "/delete-usersetting/:userSettingId",
   userSettingController.deleteUserSetting

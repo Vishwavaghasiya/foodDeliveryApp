@@ -5,32 +5,32 @@ const validate = require("../../middlewares/validate");
 
 const router = express.Router();
 
-// create deliveryAddress
+/** create deliveryAddress */
 router.post(
   "/create-deliveryAddress",
   validate(deliveryAddressValidation.createDeliveryAddress),
   deliveryAddressController.createDeliveryAddress
 );
 
-// Get deliveryAddress list
+/** Get deliveryAddress list */
 router.get(
   "/list",
   deliveryAddressController.getDeliveryAddressList
 );
 
-// Get deliveryAddress details by id
+/** Get deliveryAddress details by id */
 router.get(
   "/get-details/:deliveryAddressId",
   deliveryAddressController.getDetails
 );
 
-// deliveryAddress details update by id
+/** deliveryAddress details update by id */
 router.put(
   "/update-details/:deliveryAddressId",
   deliveryAddressController.updateDetails
 );
 
-// Delete deliveryAddress
+/** Delete deliveryAddress */
 router.delete(
   "/delete-deliveryAddress/:deliveryAddressId",
   deliveryAddressController.deleteDeliveryAddress

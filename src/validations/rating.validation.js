@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-// create rating validation
+/** create rating validation */
 const createRating = {
     body: Joi.object().keys({
         rating: Joi.number().integer().allow(),

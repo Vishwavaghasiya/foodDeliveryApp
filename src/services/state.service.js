@@ -1,27 +1,27 @@
 const { State } = require("../models");
 
 
-// Create state
+/** Create state */
 const createState = async (reqBody) => {
   return State.create(reqBody);
 };
 
-// Get state list
+/** Get state list */
 const getStateList = async () => {
   return State.find({ $or: [{ is_active: true }] })
 };
 
-// Get state details by id
+/** Get state details by id */
 const getStateById = async (stateId) => {
   return State.findById(stateId);
 };
 
-// State details update by id
+/** State details update by id */
 const updateDetails = async (stateId, updateBody) => {
   return State.findByIdAndUpdate(stateId, { $set: updateBody });
 };
 
-// Delete state
+/** Delete state */
 const deleteState = async (stateId) => {
   return State.findByIdAndDelete(stateId);
 };

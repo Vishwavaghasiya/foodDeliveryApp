@@ -1,6 +1,6 @@
 const { deliveryAssignmentService } = require("../services");
 
-// create deliveryAssignment
+/** create deliveryAssignment */
 const createDeliveryAssignment = async (req, res) => {
   try {
     const reqBody = req.body;
@@ -19,7 +19,7 @@ const createDeliveryAssignment = async (req, res) => {
   }
 };
 
-// Get deliveryAssignment list
+/** Get deliveryAssignment list */
 const getDeliveryAssignmentList = async (req, res) => {
   try {
     const { search, ...options } = req.query;
@@ -44,7 +44,7 @@ const getDeliveryAssignmentList = async (req, res) => {
   }
 };
 
-// Get deliveryAssignment details by id
+/** Get deliveryAssignment details by id */
 const getDetails = async (req, res) => {
   try {
     const getDetails = await deliveryAssignmentService.getDeliveryAssignmentById(req.params.deliveryAssignmentId);
@@ -62,7 +62,7 @@ const getDetails = async (req, res) => {
   }
 };
 
-// deliveryAssignment details update by id
+/** deliveryAssignment details update by id */
 const updateDetails = async (req, res) => {
   try {
     const deliveryAssignmentId = req.params.deliveryAssignmentId;
@@ -81,7 +81,7 @@ const updateDetails = async (req, res) => {
   }
 };
 
-// Delete deliveryAssignment by id
+/** Delete deliveryAssignment by id */
 const deleteDeliveryAssignment = async (req, res) => {
   try {
     const deliveryAssignmentId = req.params.deliveryAssignmentId;

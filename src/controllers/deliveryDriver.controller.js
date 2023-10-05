@@ -1,6 +1,6 @@
 const { deliveryDriverService } = require("../services");
 
-// create deliveryDriver
+/** create deliveryDriver */
 const createDeliveryDriver = async (req, res) => {
   try {
     const reqBody = req.body;
@@ -19,7 +19,7 @@ const createDeliveryDriver = async (req, res) => {
   }
 };
 
-// Get deliveryDriver list
+/** Get deliveryDriver list */
 const getDeliveryDriverList = async (req, res) => {
   try {
     const { search, ...options } = req.query;
@@ -44,7 +44,7 @@ const getDeliveryDriverList = async (req, res) => {
   }
 };
 
-// Get deliveryDriver details by id
+/** Get deliveryDriver details by id */
 const getDetails = async (req, res) => {
   try {
     const getDetails = await deliveryDriverService.getDeliveryDriverById(req.params.deliveryDriverId);
@@ -62,7 +62,7 @@ const getDetails = async (req, res) => {
   }
 };
 
-// deliveryDriver details update by id
+/** deliveryDriver details update by id */
 const updateDetails = async (req, res) => {
   try {
     const deliveryDriverId = req.params.deliveryDriverId;
@@ -81,7 +81,7 @@ const updateDetails = async (req, res) => {
   }
 };
 
-// Delete deliveryDriver by id
+/** Delete deliveryDriver by id */
 const deleteDeliveryDriver = async (req, res) => {
   try {
     const deliveryDriverId = req.params.deliveryDriverId;

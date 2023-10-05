@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-// create promocode validation
+/** create promocode validation */
 const createPromocode = {
     body: Joi.object().keys({
         code: Joi.number().integer().allow(),

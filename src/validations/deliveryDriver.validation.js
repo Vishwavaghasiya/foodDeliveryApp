@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-// create delivery driver validation
+/** create delivery driver validation */
 const createDeliveryDriver = {
     body: Joi.object().keys({
         vehicle_number: Joi.string().required().trim(),

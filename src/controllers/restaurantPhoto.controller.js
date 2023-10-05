@@ -1,6 +1,6 @@
 const { restaurantPhotoService } = require("../services");
 
-// create restaurantPhoto
+/** create restaurantPhoto */
 const createRestaurantPhoto = async (req, res) => {
   try {
     const reqBody = req.body;
@@ -23,7 +23,7 @@ const createRestaurantPhoto = async (req, res) => {
   }
 };
 
-// Get restaurantPhoto list
+/** Get restaurantPhoto list */
 const getRestaurantPhotoList = async (req, res) => {
   try {
     const { search, ...options } = req.query;
@@ -48,7 +48,7 @@ const getRestaurantPhotoList = async (req, res) => {
   }
 };
 
-// Get restaurantPhoto details by id
+/** Get restaurantPhoto details by id */
 const getDetails = async (req, res) => {
   try {
     const getDetails = await restaurantPhotoService.getRestaurantPhotoById(req.params.restaurantPhotoId);
@@ -66,7 +66,7 @@ const getDetails = async (req, res) => {
   }
 };
 
-// restaurantPhoto details update by id
+/** restaurantPhoto details update by id */
 const updateDetails = async (req, res) => {
   try {
     const restaurantPhotoId = req.params.restaurantPhotoId;
@@ -85,7 +85,7 @@ const updateDetails = async (req, res) => {
   }
 };
 
-// Delete restaurantPhoto by id
+/** Delete restaurantPhoto by id */
 const deleteRestaurantPhoto = async (req, res) => {
   try {
     const restaurantPhotoId = req.params.restaurantPhotoId;

@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-// create delivery assignment validation
+/** create delivery assignment validation */
 const createDeliveryAssignment = {
     body: Joi.object().keys({
         assignment_at: Joi.string().required().trim(),

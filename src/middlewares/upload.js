@@ -23,8 +23,6 @@ const storage = multer.diskStorage({
   },
 });
 
-// console.log(__dirname,"--nameemmeme")
-
 const upload = multer({
   storage: storage,
 });

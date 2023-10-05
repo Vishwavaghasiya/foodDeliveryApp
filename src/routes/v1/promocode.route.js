@@ -5,32 +5,32 @@ const validate = require("../../middlewares/validate");
 
 const router = express.Router();
 
-// create promocode
+/** create promocode */
 router.post(
   "/create-promocode",
   validate(promocodeValidation.createPromocode),
   promocodeController.createPromocode
 );
 
-// Get promocode list
+/** Get promocode list */
 router.get(
   "/list",
   promocodeController.getPromocodeList
 );
 
-// Get promocode details by id
+/** Get promocode details by id */
 router.get(
   "/get-details/:promocodeId",
   promocodeController.getDetails
 );
 
-// promocode details update by id
+/** promocode details update by id */
 router.put(
   "/update-details/:promocodeId",
   promocodeController.updateDetails
 );
 
-// Delete promocode
+/** Delete promocode */
 router.delete(
   "/delete-promocode/:promocodeId",
   promocodeController.deletePromocode

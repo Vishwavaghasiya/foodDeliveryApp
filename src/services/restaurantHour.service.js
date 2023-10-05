@@ -1,27 +1,27 @@
 const { RestaurantHour } = require("../models");
 
 
-// Create restaurantHour
+/** Create restaurantHour */
 const createRestaurantHour = async (reqBody) => {
   return RestaurantHour.create(reqBody);
 };
 
-// Get restaurantHour list
+/** Get restaurantHour list */
 const getRestaurantHourList = async () => {
   return RestaurantHour.find({$or : [{is_active: true}]})
 };
 
-// Get restaurantHour details by id
+/** Get restaurantHour details by id */
 const getRestaurantHourById = async (restaurantHourId) => {
   return RestaurantHour.findById(restaurantHourId);
 };
 
-// restaurantHour details update by id
+/** restaurantHour details update by id */
 const updateDetails = async (restaurantHourId, updateBody) => {
   return RestaurantHour.findByIdAndUpdate(restaurantHourId, { $set: updateBody });
 };
 
-// Delete restaurantHour
+/** Delete restaurantHour */
 const deleteRestaurantHour = async (restaurantHourId) => {
   return RestaurantHour.findByIdAndDelete(restaurantHourId);
 };

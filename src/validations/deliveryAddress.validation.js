@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-// create delivery address validation
+/** create delivery address validation */
 const createDeliveryAddress = {
     body: Joi.object().keys({
         address_line1: Joi.string().required().trim(),

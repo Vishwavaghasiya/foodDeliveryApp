@@ -1,6 +1,6 @@
 const { specialService } = require("../services");
 
-// create special
+/** create special */
 const createSpecial = async (req, res) => {
   try {
     const reqBody = req.body;
@@ -19,7 +19,7 @@ const createSpecial = async (req, res) => {
   }
 };
 
-// Get special list
+/** Get special list */
 const getSpecialList = async (req, res) => {
   try {
     const { search, ...options } = req.query;
@@ -44,7 +44,7 @@ const getSpecialList = async (req, res) => {
   }
 };
 
-// Get special details by id
+/** Get special details by id */
 const getDetails = async (req, res) => {
   try {
     const getDetails = await specialService.getSpecialById(req.params.specialId);
@@ -62,7 +62,7 @@ const getDetails = async (req, res) => {
   }
 };
 
-// special details update by id
+/** special details update by id */
 const updateDetails = async (req, res) => {
   try {
     const specialId = req.params.specialId;
@@ -81,7 +81,7 @@ const updateDetails = async (req, res) => {
   }
 };
 
-// Delete special by id
+/** Delete special by id */
 const deleteSpecial = async (req, res) => {
   try {
     const specialId = req.params.specialId;

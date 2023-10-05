@@ -1,6 +1,6 @@
 const { restaurantHourService } = require("../services");
 
-// create restaurantHour
+/** create restaurantHour */
 const createRestaurantHour = async (req, res) => {
   try {
     const reqBody = req.body;
@@ -19,7 +19,7 @@ const createRestaurantHour = async (req, res) => {
   }
 };
 
-// Get restaurantHour list
+/** Get restaurantHour list */
 const getRestaurantHourList = async (req, res) => {
   try {
     const { search, ...options } = req.query;
@@ -44,7 +44,7 @@ const getRestaurantHourList = async (req, res) => {
   }
 };
 
-// Get restaurantHour details by id
+/** Get restaurantHour details by id */
 const getDetails = async (req, res) => {
   try {
     const getDetails = await restaurantHourService.getRestaurantHourById(req.params.restaurantHourId);
@@ -62,7 +62,7 @@ const getDetails = async (req, res) => {
   }
 };
 
-// restaurantHour details update by id
+/** restaurantHour details update by id */
 const updateDetails = async (req, res) => {
   try {
     const restaurantHourId = req.params.restaurantHourId;
@@ -81,7 +81,7 @@ const updateDetails = async (req, res) => {
   }
 };
 
-// Delete restaurantHour by id
+/** Delete restaurantHour by id */
 const deleteRestaurantHour = async (req, res) => {
   try {
     const restaurantHourId = req.params.restaurantHourId;

@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-// create complaint validation
+/** create complaint validation */
 const createComplaint = {
     body: Joi.object().keys({
         content: Joi.string().required().trim(),

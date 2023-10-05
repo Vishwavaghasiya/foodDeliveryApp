@@ -1,6 +1,6 @@
 const { orderItemService } = require("../services");
 
-// create orderItem
+/** create orderItem */
 const createOrderItem = async (req, res) => {
   try {
     const reqBody = req.body;
@@ -19,7 +19,7 @@ const createOrderItem = async (req, res) => {
   }
 };
 
-// Get orderItem list
+/** Get orderItem list */
 const getOrderItemList = async (req, res) => {
   try {
     const { search, ...options } = req.query;
@@ -44,7 +44,7 @@ const getOrderItemList = async (req, res) => {
   }
 };
 
-// Get orderItem details by id
+/** Get orderItem details by id */
 const getDetails = async (req, res) => {
   try {
     const getDetails = await orderItemService.getOrderItemById(req.params.orderItemId);
@@ -62,7 +62,7 @@ const getDetails = async (req, res) => {
   }
 };
 
-// orderItem details update by id
+/** orderItem details update by id */
 const updateDetails = async (req, res) => {
   try {
     const orderItemId = req.params.orderItemId;
@@ -81,7 +81,7 @@ const updateDetails = async (req, res) => {
   }
 };
 
-// Delete orderItem by id
+/** Delete orderItem by id */
 const deleteOrderItem = async (req, res) => {
   try {
     const orderItemId = req.params.orderItemId;

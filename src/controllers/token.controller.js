@@ -1,19 +1,19 @@
 const { tokenService } = require("../services");
 const moment = require("moment");
 
-// Create token
+/** Create token */
 const generateToken = async (req, res) => {
   try {
     const reqBody = req.body;
 
     reqBody.expire_time = moment().add(10, "minutes");
 
-    // Create token
+    /** Create token */
     const token = await tokenService.generateToken(reqBody);
 
     reqBody.token = token;
 
-    // Save token
+    /** Save token */
     const saveToken = await tokenService.saveToken(reqBody);
 
     res
@@ -27,7 +27,7 @@ const generateToken = async (req, res) => {
   }
 };
 
-// Verify token
+/** Verify token */
 const verifyToken = async (req, res) => {
   res.status(200).json({
     success: true,

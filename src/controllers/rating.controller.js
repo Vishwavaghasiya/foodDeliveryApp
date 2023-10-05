@@ -1,6 +1,6 @@
 const { ratingService } = require("../services");
 
-// create rating
+/** create rating */
 const createRating = async (req, res) => {
   try {
     const reqBody = req.body;
@@ -19,7 +19,7 @@ const createRating = async (req, res) => {
   }
 };
 
-// Get rating list
+/** Get rating list */
 const getRatingList = async (req, res) => {
   try {
     const { search, ...options } = req.query;
@@ -44,7 +44,7 @@ const getRatingList = async (req, res) => {
   }
 };
 
-// Get rating details by id
+/** Get rating details by id */
 const getDetails = async (req, res) => {
   try {
     const getDetails = await ratingService.getRatingById(req.params.ratingId);
@@ -62,7 +62,7 @@ const getDetails = async (req, res) => {
   }
 };
 
-// rating details update by id
+/** rating details update by id */
 const updateDetails = async (req, res) => {
   try {
     const ratingId = req.params.ratingId;
@@ -81,7 +81,7 @@ const updateDetails = async (req, res) => {
   }
 };
 
-// Delete rating by id
+/** Delete rating by id */
 const deleteRating = async (req, res) => {
   try {
     const ratingId = req.params.ratingId;

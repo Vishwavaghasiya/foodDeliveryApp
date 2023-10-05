@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-// create message validation
+/** create message validation */
 const createMessage = {
     body: Joi.object().keys({
         content: Joi.string().required().trim(),

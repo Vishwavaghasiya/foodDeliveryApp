@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-// Create state validation
+/** Create state validation */
 const createState = {
   body: Joi.object().keys({
     State_name: Joi.string().required().trim(),

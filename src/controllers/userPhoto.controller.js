@@ -1,6 +1,6 @@
 const { userPhotoService } = require("../services");
 
-// create userPhoto
+/** create userPhoto */
 const createUserPhoto = async (req, res) => {
   try {
     const reqBody = req.body;
@@ -23,7 +23,7 @@ const createUserPhoto = async (req, res) => {
   }
 };
 
-// Get userPhoto list
+/** Get userPhoto list */
 const getUserPhotoList = async (req, res) => {
   try {
     const { search, ...options } = req.query;
@@ -48,7 +48,7 @@ const getUserPhotoList = async (req, res) => {
   }
 };
 
-// Get userPhoto details by id
+/** Get userPhoto details by id */
 const getDetails = async (req, res) => {
   try {
     const getDetails = await userPhotoService.getUserPhotoById(req.params.userPhotoId);
@@ -66,7 +66,7 @@ const getDetails = async (req, res) => {
   }
 };
 
-// userPhoto details update by id
+/** userPhoto details update by id */
 const updateDetails = async (req, res) => {
   try {
     const userPhotoId = req.params.userPhotoId;
@@ -85,7 +85,7 @@ const updateDetails = async (req, res) => {
   }
 };
 
-// Delete userPhoto by id
+/** Delete userPhoto by id */
 const deleteUserPhoto = async (req, res) => {
   try {
     const userPhotoId = req.params.userPhotoId;

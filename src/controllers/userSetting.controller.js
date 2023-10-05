@@ -1,6 +1,6 @@
 const { userSettingService } = require("../services");
 
-// create userSetting
+/** create userSetting */
 const createUserSetting = async (req, res) => {
   try {
     const reqBody = req.body;
@@ -19,7 +19,7 @@ const createUserSetting = async (req, res) => {
   }
 };
 
-// Get userSetting list
+/** Get userSetting list */
 const getUserSettingList = async (req, res) => {
   try {
     const { search, ...options } = req.query;
@@ -44,7 +44,7 @@ const getUserSettingList = async (req, res) => {
   }
 };
 
-// Get userSetting details by id
+/** Get userSetting details by id */
 const getDetails = async (req, res) => {
   try {
     const getDetails = await userSettingService.getUserSettingById(req.params.userSettingId);
@@ -62,7 +62,7 @@ const getDetails = async (req, res) => {
   }
 };
 
-// userSetting details update by id
+/** userSetting details update by id */
 const updateDetails = async (req, res) => {
   try {
     const userSettingId = req.params.userSettingId;
@@ -81,7 +81,7 @@ const updateDetails = async (req, res) => {
   }
 };
 
-// Delete userSetting by id
+/** Delete userSetting by id */
 const deleteUserSetting = async (req, res) => {
   try {
     const userSettingId = req.params.userSettingId;

@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-// Create user setting validation
+/** Create user setting validation */
 const createUserSetting = {
   body: Joi.object().keys({
     email_notifications: Joi.boolean().required(),

@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+/**restaurant photo schema */
 const restaurantPhotoSchema = new mongoose.Schema(
     {
         photo_url: {

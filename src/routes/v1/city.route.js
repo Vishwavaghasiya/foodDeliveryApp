@@ -5,32 +5,32 @@ const validate = require("../../middlewares/validate");
 
 const router = express.Router();
 
-// create city
+/** create city */
 router.post(
   "/create-city",
   validate(cityValidation.createCity),
   cityController.createCity
 );
 
-// Get city list
+/** Get city list */
 router.get(
   "/list",
   cityController.getCityList
 );
 
-// Get city details by id
+/** Get city details by id */
 router.get(
   "/get-details/:cityId",
   cityController.getDetails
 );
 
-// city details update by id
+/** city details update by id */
 router.put(
   "/update-details/:cityId",
   cityController.updateDetails
 );
 
-// Delete city
+/** Delete city */
 router.delete(
   "/delete-city/:cityId",
   cityController.deleteCity

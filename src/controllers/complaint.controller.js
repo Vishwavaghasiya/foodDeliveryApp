@@ -1,6 +1,6 @@
 const { complaintService } = require("../services");
 
-// create complaint
+/** create complaint */
 const createComplaint = async (req, res) => {
   try {
     const reqBody = req.body;
@@ -19,7 +19,7 @@ const createComplaint = async (req, res) => {
   }
 };
 
-// Get complaint list
+/** Get complaint list */
 const getComplaintList = async (req, res) => {
   try {
     const { search, ...options } = req.query;
@@ -44,7 +44,7 @@ const getComplaintList = async (req, res) => {
   }
 };
 
-// Get complaint details by id
+/** Get complaint details by id */
 const getDetails = async (req, res) => {
   try {
     const getDetails = await complaintService.getComplaintById(req.params.complaintId);
@@ -62,7 +62,7 @@ const getDetails = async (req, res) => {
   }
 };
 
-// complaint details update by id
+/** complaint details update by id */
 const updateDetails = async (req, res) => {
   try {
     const complaintId = req.params.complaintId;
@@ -81,7 +81,7 @@ const updateDetails = async (req, res) => {
   }
 };
 
-// Delete complaint by id
+/** Delete complaint by id */
 const deleteComplaint = async (req, res) => {
   try {
     const complaintId = req.params.complaintId;

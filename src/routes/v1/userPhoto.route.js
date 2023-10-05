@@ -7,7 +7,7 @@ const {upload} = require("../../middlewares/upload");
 
 const router = express.Router();
 
-// create UserPhoto
+/** create UserPhoto */
 router.post(
   "/create-UserPhoto",
   auth(),
@@ -16,25 +16,25 @@ router.post(
   userPhotoController.createUserPhoto
 );
 
-// Get UserPhoto list
+/** Get UserPhoto list */
 router.get(
   "/list",
   userPhotoController.getUserPhotoList
 );
 
-// Get UserPhoto details by id
+/** Get UserPhoto details by id */
 router.get(
   "/get-details/:userPhotoId",
   userPhotoController.getDetails
 );
 
-// UserPhoto details update by id
+/** UserPhoto details update by id */
 router.put(
   "/update-details/:userPhotoId",
   userPhotoController.updateDetails
 );
 
-// Delete UserPhoto
+/** Delete UserPhoto */
 router.delete(
   "/delete-UserPhoto/:userPhotoId",
   userPhotoController.deleteUserPhoto

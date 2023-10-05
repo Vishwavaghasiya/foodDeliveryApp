@@ -1,27 +1,27 @@
 const { RestaurantPhoto } = require("../models");
 
 
-// Create restaurantPhoto
+/** Create restaurantPhoto */
 const createRestaurantPhoto = async (reqBody) => {
   return RestaurantPhoto.create(reqBody);
 };
 
-// Get restaurantPhoto list
+/** Get restaurantPhoto list */
 const getRestaurantPhotoList = async () => {
   return RestaurantPhoto.find({$or : [{is_active: true}]})
 };
 
-// Get restaurantPhoto details by id
+/** Get restaurantPhoto details by id */
 const getRestaurantPhotoById = async (restaurantPhotoId) => {
   return RestaurantPhoto.findById(restaurantPhotoId);
 };
 
-// restaurantPhoto details update by id
+/** restaurantPhoto details update by id */
 const updateDetails = async (restaurantPhotoId, updateBody) => {
   return RestaurantPhoto.findByIdAndUpdate(restaurantPhotoId, { $set: updateBody });
 };
 
-// Delete restaurantPhoto
+/** Delete restaurantPhoto */
 const deleteRestaurantPhoto = async (restaurantPhotoId) => {
   return RestaurantPhoto.findByIdAndDelete(restaurantPhotoId);
 };

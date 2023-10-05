@@ -1,6 +1,6 @@
 const { deliveryAddressService } = require("../services");
 
-// create deliveryAddress
+/** create deliveryAddress */
 const createDeliveryAddress = async (req, res) => {
   try {
     const reqBody = req.body;
@@ -19,7 +19,7 @@ const createDeliveryAddress = async (req, res) => {
   }
 };
 
-// Get deliveryAddress list
+/** Get deliveryAddress list */
 const getDeliveryAddressList = async (req, res) => {
   try {
     const { search, ...options } = req.query;
@@ -44,7 +44,7 @@ const getDeliveryAddressList = async (req, res) => {
   }
 };
 
-// Get deliveryAddress details by id
+/** Get deliveryAddress details by id */
 const getDetails = async (req, res) => {
   try {
     const getDetails = await deliveryAddressService.getDeliveryAddressById(req.params.deliveryAddressId);
@@ -62,7 +62,7 @@ const getDetails = async (req, res) => {
   }
 };
 
-// deliveryAddress details update by id
+/** deliveryAddress details update by id */
 const updateDetails = async (req, res) => {
   try {
     const deliveryAddressId = req.params.deliveryAddressId;
@@ -81,7 +81,7 @@ const updateDetails = async (req, res) => {
   }
 };
 
-// Delete deliveryAddress by id
+/** Delete deliveryAddress by id */
 const deleteDeliveryAddress = async (req, res) => {
   try {
     const deliveryAddressId = req.params.deliveryAddressId;

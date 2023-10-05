@@ -1,6 +1,6 @@
 const { promocodeService } = require("../services");
 
-// create promocode
+/** create promocode */
 const createPromocode = async (req, res) => {
   try {
     const reqBody = req.body;
@@ -19,7 +19,7 @@ const createPromocode = async (req, res) => {
   }
 };
 
-// Get promocode list
+/** Get promocode list */
 const getPromocodeList = async (req, res) => {
   try {
     const { search, ...options } = req.query;
@@ -44,7 +44,7 @@ const getPromocodeList = async (req, res) => {
   }
 };
 
-// Get promocode details by id
+/** Get promocode details by id */
 const getDetails = async (req, res) => {
   try {
     const getDetails = await promocodeService.getPromocodeById(req.params.promocodeId);
@@ -62,7 +62,7 @@ const getDetails = async (req, res) => {
   }
 };
 
-// promocode details update by id
+/** promocode details update by id */
 const updateDetails = async (req, res) => {
   try {
     const promocodeId = req.params.promocodeId;
@@ -81,7 +81,7 @@ const updateDetails = async (req, res) => {
   }
 };
 
-// Delete promocode by id
+/** Delete promocode by id */
 const deletePromocode = async (req, res) => {
   try {
     const promocodeId = req.params.promocodeId;

@@ -5,32 +5,32 @@ const validate = require("../../middlewares/validate");
 
 const router = express.Router();
 
-// create orderItem
+/** create orderItem */
 router.post(
   "/create-orderItem",
   validate(orderItemValidation.createOrderItem),
   orderItemController.createOrderItem
 );
 
-// Get orderItem list
+/** Get orderItem list */
 router.get(
   "/list",
   orderItemController.getOrderItemList
 );
 
-// Get orderItem details by id
+/** Get orderItem details by id */
 router.get(
   "/get-details/:orderItemId",
   orderItemController.getDetails
 );
 
-// orderItem details update by id
+/** orderItem details update by id */
 router.put(
   "/update-details/:orderItemId",
   orderItemController.updateDetails
 );
 
-// Delete orderItem
+/** Delete orderItem */
 router.delete(
   "/delete-orderItem/:orderItemId",
   orderItemController.deleteOrderItem

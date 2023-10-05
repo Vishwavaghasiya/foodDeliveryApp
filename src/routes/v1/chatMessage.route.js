@@ -5,32 +5,32 @@ const validate = require("../../middlewares/validate");
 
 const router = express.Router();
 
-// create chatMessage
+/** create chatMessage */
 router.post(
   "/create-chatMessage",
   validate(chatMessageValidation.createChatMessage),
   chatMessageController.createChatMessage
 );
 
-// Get chatMessage list
+/** Get chatMessage list */
 router.get(
   "/list",
   chatMessageController.getChatMessageList
 );
 
-// Get chatMessage details by id
+/** Get chatMessage details by id */
 router.get(
   "/get-details/:chatMessageId",
   chatMessageController.getDetails
 );
 
-// user setting details update by id
+/** user setting details update by id */
 router.put(
   "/update-details/:chatMessageId",
   chatMessageController.updateDetails
 );
 
-// Delete chatMessage
+/** Delete chatMessage */
 router.delete(
   "/delete-chatMessage/:chatMessageId",
   chatMessageController.deleteChatMessage

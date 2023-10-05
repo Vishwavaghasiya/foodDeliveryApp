@@ -1,6 +1,6 @@
 const { messageService } = require("../services");
 
-// create message
+/** create message */
 const createMessage = async (req, res) => {
   try {
     const reqBody = req.body;
@@ -19,7 +19,7 @@ const createMessage = async (req, res) => {
   }
 };
 
-// Get message list
+/** Get message list */
 const getMessageList = async (req, res) => {
   try {
     const { search, ...options } = req.query;
@@ -44,7 +44,7 @@ const getMessageList = async (req, res) => {
   }
 };
 
-// Get message details by id
+/** Get message details by id */
 const getDetails = async (req, res) => {
   try {
     const getDetails = await messageService.getMessageById(req.params.messageId);
@@ -62,7 +62,7 @@ const getDetails = async (req, res) => {
   }
 };
 
-// message details update by id
+/** message details update by id */
 const updateDetails = async (req, res) => {
   try {
     const messageId = req.params.messageId;
@@ -81,7 +81,7 @@ const updateDetails = async (req, res) => {
   }
 };
 
-// Delete message by id
+/** Delete message by id */
 const deleteMessage = async (req, res) => {
   try {
     const messageId = req.params.messageId;

@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-// create special validation
+/** create special validation */
 const createSpecial = {
     body: Joi.object().keys({
         dish_name: Joi.string().required().trim(),

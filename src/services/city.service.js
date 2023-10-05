@@ -1,27 +1,27 @@
 const { City } = require("../models");
 
 
-// Create city
+/** Create city */
 const createCity = async (reqBody) => {
   return City.create(reqBody);
 };
 
-// Get city list
+/** Get city list */
 const getCityList = async () => {
   return City.find({ $or: [{ is_active: true }] })
 };
 
-// Get city details by id
+/** Get city details by id */
 const getCityById = async (cityId) => {
   return City.findById(cityId);
 };
 
-// city details update by id
+/** city details update by id */
 const updateDetails = async (cityId, updateBody) => {
   return City.findByIdAndUpdate(cityId, { $set: updateBody });
 };
 
-// Delete city
+/** Delete city */
 const deleteCity = async (cityId) => {
   return City.findByIdAndDelete(cityId);
 };
