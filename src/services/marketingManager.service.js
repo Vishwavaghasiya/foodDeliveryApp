@@ -7,7 +7,7 @@ const createMarketingManager = async (reqBody) => {
 
 /**get MarketingManager list */
 const getMarketingManagerList = async (req, res) => {
-    return MarketingManager.find().populate("user");
+    return MarketingManager.find().populate({path: "user_id" , select: "user_name"});
 }
 
 /**get MarketingManager details by id */

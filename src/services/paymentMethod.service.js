@@ -8,8 +8,8 @@ const createPaymentMethods = async (reqBody) => {
 /**get PaymentMethods list */
 const getPaymentMethodsList = async (req, res) => {
     return PaymentMethods.find()
-        .populate("user_id")
-        .populate("payment_history");
+        .populate({ path: "user_id", select: "user_name" })
+        .populate({ path: "payment_history_id", select: "amount , payment_method , status" });
 }
 
 /**get PaymentMethods details by id */

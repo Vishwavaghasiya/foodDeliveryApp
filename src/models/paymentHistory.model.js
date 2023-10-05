@@ -19,10 +19,6 @@ const paymentHistorySchema = new mongoose.Schema(
             type: Number,
             trim: true
         },
-        payment_method: {
-            type: String,
-            trim: true
-        },
         status: {
             type: String,
             trim: true

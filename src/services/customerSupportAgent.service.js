@@ -7,7 +7,7 @@ const createCustomerSupportAgent = async (reqBody) => {
 
 /**get CustomerSupportAgent list */
 const getCustomerSupportAgentList = async (req, res) => {
-    return CustomerSupportAgent.find().populate("user");
+    return CustomerSupportAgent.find().populate({ path: "user_id", select: "user_name" });
 }
 
 /**get CustomerSupportAgent details by id */

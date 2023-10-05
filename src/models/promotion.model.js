@@ -11,18 +11,6 @@ const promotionSchema = new mongoose.Schema(
             type: mongoose.Types.ObjectId,
             ref: "marketingManager"
         },
-        deliveryDriver_id: {
-            type: mongoose.Types.ObjectId,
-            ref: "deliveryDriver"
-        },
-        customerSupportAgent_id: {
-            type: mongoose.Types.ObjectId,
-            ref: "customerSupportAgent"
-        },
-        contentCreater_id: {
-            type: mongoose.Types.ObjectId,
-            ref: "contentCreater"
-        },
         description: {
             type: String,
             trim: true
