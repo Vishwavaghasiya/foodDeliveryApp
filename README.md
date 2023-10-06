@@ -88,3 +88,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Provide contact information, such as your email or social media profiles, so that users and potential contributors can reach out to you with questions or feedback.
 
 Feel free to customize this README template to fit the specific details of your food delivery app. Make sure to keep it clear, concise, and well-organized to help users navigate and understand your project easily.
+
