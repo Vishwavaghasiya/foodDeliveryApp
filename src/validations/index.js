@@ -6,6 +6,9 @@ module.exports.adminUserValidation = require("./adminUser.validation");
 module.exports.userSettingValidation = require("./userSetting.validation");
 module.exports.deliveryAddressValidation = require("./deliveryAddress.validation");
 module.exports.contentCreaterValidation = require("./contentCreater.validation");
+module.exports.customerStoryValidation = require("./customerStory.validation");
+module.exports.blogValidation = require("./blog.validation");
+module.exports.userFaqValidation = require("./userFaq.validation");
 
 /* -------------------------------------------------------------------------- */
 /*                                    CHAT                                    */

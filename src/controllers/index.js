@@ -6,6 +6,9 @@ module.exports.adminUserController = require("./adminUser.controller");
 module.exports.userSettingController = require("./userSetting.controller");
 module.exports.deliveryAddressController = require("./deliveryAddress.controller");
 module.exports.contentCreaterController = require("./contentCreater.controller");
+module.exports.customerStoryController = require("./customerStory.controller");
+module.exports.blogController = require("./blog.controller");
+module.exports.userFaqController = require("./userFaq.controller");
 
 /* -------------------------------------------------------------------------- */
 /*                                    CHAT                                    */

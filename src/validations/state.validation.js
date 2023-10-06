@@ -5,7 +5,7 @@ const createState = {
   body: Joi.object().keys({
     State_name: Joi.string().required().trim(),
     capital_city: Joi.string().required().trim(),
-    created_at: Joi.date().iso().required(),
+    created_at: Joi.string().required().trim(),
   }),
 };
 

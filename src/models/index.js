@@ -6,6 +6,9 @@ module.exports.AdminUser = require("./adminUser.model");
 module.exports.UserSetting = require("./userSetting.model");
 module.exports.DeliveryAddress = require("./deliveryAddress.model");
 module.exports.ContentCreater = require("./contentCreater.model");
+module.exports.customerStory = require("./customerStory.model");
+module.exports.blog = require("./blog.model");
+module.exports.UserFaq = require("./userFaq.model");
 
 /* -------------------------------------------------------------------------- */
 /*                                    CHAT                                    */

@@ -6,6 +6,9 @@ module.exports.adminUserService = require("./adminUser.service");
 module.exports.userSettingService = require("./userSetting.service");
 module.exports.deliveryAddressService = require("./deliveryAddress.service");
 module.exports.contentCreaterService = require("./contentCreater.service");
+module.exports.customerStoryService = require("./customerStory.service");
+module.exports.blogService = require("./blog.service");
+module.exports.userFaqService = require("./userFaq.service");
 
 /* -------------------------------------------------------------------------- */
 /*                                    CHAT                                    */

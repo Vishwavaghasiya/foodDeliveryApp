@@ -7,7 +7,7 @@ const createCountry = {
     continent_name: Joi.string().required().trim(),
     official_language: Joi.string().required().trim(),
     currency: Joi.string().required().trim(),
-    created_at: Joi.date().iso().required(),
+    created_at: Joi.string().required().trim(),
   }),
 };
 

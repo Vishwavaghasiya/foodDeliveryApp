@@ -7,6 +7,9 @@ const adminUserRoute = require("./adminUser.route");
 const userSettingRoute = require("./userSetting.route");
 const deliveryAddressRoute = require("./deliveryAddress.route");
 const contentCreaterRoute = require("./contentCreater.route");
+const customerStoryRoute = require("./customerStory.route");
+const blogRoute = require("./blog.route");
+const userFaqRoute = require("./userFaq.route");
 
 /* -------------------------------------------------------------------------- */
 /*                                    CHAT                                    */
@@ -82,6 +85,9 @@ router.use("/adminUser" , adminUserRoute);
 router.use("/userSetting", userSettingRoute);
 router.use("/deliveryAddress", deliveryAddressRoute);
 router.use("/contentCreater" , contentCreaterRoute);
+router.use("/customerStory" , customerStoryRoute);
+router.use("/blog" , blogRoute);
+router.use("/userFaq" , userFaqRoute);
 
 /* -------------------------------------------------------------------------- */
 /*                                    CHAT                                    */
