@@ -1,14 +1,17 @@
 const { RestaurantHour } = require("../models");
 
-
-/** Create restaurantHour */
+// Create restaurantHour
 const createRestaurantHour = async (reqBody) => {
   return RestaurantHour.create(reqBody);
 };
 
 /** Get restaurantHour list */
 const getRestaurantHourList = async () => {
-  return RestaurantHour.find({$or : [{is_active: true}]})
+  return RestaurantHour.find({ $or: [{ is_active: true }] })
+    .populate({
+      path: "restaurant_id",
+      select: "name , location"
+    })
 };
 
 /** Get restaurantHour details by id */

@@ -3,13 +3,17 @@ const mongoose = require("mongoose");
 /**restaurant owners schema */
 const restaurantOwners = new mongoose.Schema(
     {
-        user: {
+        user_id: {
             type: mongoose.Types.ObjectId,
             ref: "user"
         },
-        restaurant: {
+        restaurant_id: {
             type: mongoose.Types.ObjectId,
             ref: "restaurant"
+        },
+        name: {
+            type: String,
+            trim: true
         },
         role: {
             type: String,

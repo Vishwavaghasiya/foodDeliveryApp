@@ -7,7 +7,7 @@ const paymentMethodSchema = new mongoose.Schema(
             type: mongoose.Types.ObjectId,
             ref: "user"
         },
-        payment_history: {
+        payment_history_id: {
             type: mongoose.Types.ObjectId,
             ref: "paymentHistory"
         },

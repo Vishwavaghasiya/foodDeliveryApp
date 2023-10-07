@@ -1,7 +1,6 @@
 const { State } = require("../models");
 
-
-/** Create state */
+// Create state
 const createState = async (reqBody) => {
   return State.create(reqBody);
 };
@@ -9,6 +8,10 @@ const createState = async (reqBody) => {
 /** Get state list */
 const getStateList = async () => {
   return State.find({ $or: [{ is_active: true }] })
+    .populate({
+      path: "country_id",
+      select: "country_name , currency"
+    })
 };
 
 /** Get state details by id */

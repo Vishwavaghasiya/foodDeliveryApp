@@ -8,8 +8,14 @@ const createComplaint = async (reqBody) => {
 /**Get complaint list */
 const getComplaintList = async () => {
   return Complaint.find({ $or: [{ is_active: true }] })
-    .populate("restaurant_id")
-    .populate("user_id")
+    .populate({
+      path: "user_id",
+      select: "user_name , email"
+    })
+    .populate({
+      path: "restaurant_id",
+      select: "name , location"
+    })
 };
 
 /**Get complaint details by id */

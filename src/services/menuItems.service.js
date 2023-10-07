@@ -7,7 +7,15 @@ const createMenuItems = async (reqBody) => {
 
 /**get MenuItems list */
 const getMenuItemsList = async (req, res) => {
-    return MenuItems.find().populate("category_id").populate("restaurant_id");
+    return MenuItems.find()
+        .populate({
+            path: "category_id",
+            select: "name , description"
+        })
+        .populate({
+            path: "restaurant_id",
+            select: "name , location"
+        });
 }
 
 /**get MenuItems details by id */

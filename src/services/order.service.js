@@ -7,7 +7,15 @@ const createOrder = async (reqBody) => {
 
 /**get order list */
 const getOrderList = async (req, res) => {
-    return Orders.find().populate("user_id").populate("restaurant_id");
+    return Orders.find()
+        .populate({
+            path: "user_id",
+            select: "user_name , profile_info"
+        })
+        .populate({
+            path: "restaurant_id",
+            select: "name , location"
+        });
 }
 
 /**get order by id */

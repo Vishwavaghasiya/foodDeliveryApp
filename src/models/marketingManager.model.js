@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 /**Marketing manager schema */
 const marketingManagerSchema = new mongoose.Schema(
     {
-        user: {
+        user_id: {
             type: mongoose.Types.ObjectId,
             ref : "user"
         },

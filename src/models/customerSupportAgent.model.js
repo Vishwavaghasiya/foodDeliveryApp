@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 /**customer support agent schema */
 const customerSupportAgent = new mongoose.Schema(
     {
-        user: {
+        user_id: {
             type: mongoose.Types.ObjectId,
             ref: "user"
         },

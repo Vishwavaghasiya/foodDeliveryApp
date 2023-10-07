@@ -8,11 +8,8 @@ const createPromotion = async (reqBody) => {
 /**get Promotion list */
 const getPromotionList = async (req, res) => {
     return Promotion.find()
-        .populate("restaurant_id")
-        .populate("marketingManager_id")
-        .populate("deliveryDriver_id")
-        .populate("customerSupportAgent_id")
-        .populate("contentCreater_id");
+        .populate({ path: "restaurant_id", select: "name" })
+        .populate({ path: "marketingManager_id", select: "campaign_name , promotion_details" })
 }
 
 /**get Promotion details by id */

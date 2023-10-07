@@ -7,7 +7,15 @@ const createRestaurantOwners = async (reqBody) => {
 
 /**get RestaurantOwners list */
 const getRestaurantOwnersList = async (req, res) => {
-    return RestaurantOwners.find().populate("user").populate("restaurant");
+    return RestaurantOwners.find()
+        .populate({
+            path: "user_id",
+            select: "user_name"
+        })
+        .populate({
+            path: "restaurant_id",
+            select: "name , location"
+        });
 }
 
 /**get RestaurantOwners details by id */

@@ -8,7 +8,10 @@ const createCategories = async (reqBody) => {
 /**get Categories list */
 const getCategoriesList = async (req, res) => {
     return Categories.find()
-        .populate("menuItems_id");
+        .populate({
+            path: "menuItems_id",
+            select: "name , description"
+        });
 }
 
 /**get Categories details by id */

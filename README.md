@@ -73,6 +73,4 @@ If you have any questions or suggestions, feel free to reach out to us at [vishw
 
 Enjoy your foodie journey with Foodie Express! 🍽️🥂
 
-```
-
 Feel free to customize this README to match your website's branding and specific features. Enjoy building your food delivery website with Node.js! 🍕🌮🍔🍰🚀

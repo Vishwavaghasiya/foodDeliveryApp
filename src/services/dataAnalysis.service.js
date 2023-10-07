@@ -7,7 +7,7 @@ const createDataAnalysis = async (reqBody) => {
 
 /**get DataAnalysis list */
 const getDataAnalysisList = async (req, res) => {
-    return DataAnalysis.find().populate("user_id");
+    return DataAnalysis.find().populate({ path: "user_id", select: "user_name" });
 }
 
 /**get DataAnalysis details by id */

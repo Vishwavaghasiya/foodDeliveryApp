@@ -8,7 +8,15 @@ const createPromocode = async (reqBody) => {
 
 /** Get promocode list */
 const getPromocodeList = async () => {
-  return Promocode.find({$or : [{is_active: true}]})
+  return Promocode.find({ $or: [{ is_active: true }] })
+    .populate({
+      path: "restaurant_id",
+      select: "name"
+    })
+    .populate({
+      path: "menuItem_id",
+      select: "name , description"
+    })
 };
 
 /** Get promocode details by id */

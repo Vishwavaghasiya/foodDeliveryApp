@@ -8,7 +8,15 @@ const createDeliveryAssignment = async (reqBody) => {
 
 /* Get deliveryAssignment list */
 const getDeliveryAssignmentList = async () => {
-  return DeliveryAssignment.find({$or : [{is_active: true}]})
+  return DeliveryAssignment.find({ $or: [{ is_active: true }] })
+    .populate({
+      path: "order_id",
+      select: "name , total_price"
+    })
+    .populate({
+      path: "driver_id",
+      select: "name , license_number"
+    })
 };
 
 /** Get deliveryAssignment details by id */

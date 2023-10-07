@@ -5,7 +5,7 @@ const restaurantSchema = new mongoose.Schema(
     {
         owner_id: {
             type: mongoose.Types.ObjectId,
-            ref : "owner"
+            ref : "restaurantOwners"
         },
         name: {
             type: String,

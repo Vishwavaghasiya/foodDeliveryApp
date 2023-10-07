@@ -8,7 +8,10 @@ const createDeliveryDriver = async (reqBody) => {
 /**Get deliveryDriver list */
 const getDeliveryDriverList = async () => {
   return DeliveryDriver.find({ $or: [{ is_active: true }] })
-    .populate("user_id")
+    .populate({
+      path: "user_id",
+      select: "user_name , address"
+    })
 };
 
 /**Get deliveryDriver details by id */

@@ -3,6 +3,10 @@ const mongoose = require("mongoose");
 /**state schema */
 const stateSchema = new mongoose.Schema(
     {
+        country_id: {
+            type: mongoose.Types.ObjectId,
+            ref: "country"
+        },
         State_name: {
             type: String,
             trim: true,
@@ -28,5 +32,3 @@ const stateSchema = new mongoose.Schema(
 
 const State = mongoose.model("state", stateSchema);
 module.exports = State
-
-// country id ref

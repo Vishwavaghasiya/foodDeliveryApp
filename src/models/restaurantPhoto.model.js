@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-/**restaurant photo schema */
+/**Restaurant schema */
 const restaurantPhotoSchema = new mongoose.Schema(
     {
         photo_url: {
@@ -31,5 +31,3 @@ const restaurantPhotoSchema = new mongoose.Schema(
 
 const RestaurantPhoto = mongoose.model("restaurantPhoto", restaurantPhotoSchema);
 module.exports = RestaurantPhoto
-
-// restaurant_id ref

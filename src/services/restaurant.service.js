@@ -7,7 +7,11 @@ const createRestaurant = async (reqBody) => {
 
 /**get Restaurant list */
 const getRestaurantList = async (req, res) => {
-    return Restaurant.find().populate("owner_id");
+    return Restaurant.find()
+    .populate({
+        path: "owner_id",
+        select: "name"
+    });
 }
 
 /**get Restaurant details by id */
