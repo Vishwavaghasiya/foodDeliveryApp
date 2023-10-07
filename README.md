@@ -4,18 +4,20 @@ Welcome to Foodie Express, where we bring delicious meals right to your doorstep
 
  🌟 Features
 
-🚗 Fast and Reliable Delivery
-🍕 Diverse Menu Selection
-💳 Secure Payment Options
-🌮 Easy Order Tracking
-📱 Responsive and User-Friendly Design
+- 📅 **Cron Jobs:** Schedule orders for delivery at specific times, ensuring timely deliveries.
+- 📧 **Email Notifications:** Keep customers and restaurant owners informed about order status.
+- 📂 **File Upload:** Easily upload restaurant menus and images using Multer.
+- 👤 **User Authentication:** Secure user registration and login processes with bcrypt.js.
+- 🌟 **User Profiles:** Allow users to customize their profiles and save favorite orders.
+- 📈 **Order Analytics:** Track order history, analyze customer preferences, and improve service.
+- 🛒 **Online Payment:** Support secure online payment options for user convenience.
 
  🚀 Getting Started
 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/foodie-express.git
+   git clone https://github.com/Vishwavaghasiya/foodDeliveryApp.git
    cd foodie-express
    ```
 
@@ -67,7 +69,7 @@ We welcome contributions! Feel free to open issues and submit pull requests to h
 
  📞 Contact
 
-If you have any questions or suggestions, feel free to reach out to us at [contact@foodieexpress.com](mailto:contact@foodieexpress.com).
+If you have any questions or suggestions, feel free to reach out to us at [vishwavaghasiya595@gmail.com](princykanpariya321@gmail.com).
 
 Enjoy your foodie journey with Foodie Express! 🍽️🥂
 
