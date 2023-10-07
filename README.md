@@ -69,7 +69,7 @@ We welcome contributions! Feel free to open issues and submit pull requests to h
 
  📞 Contact
 
-If you have any questions or suggestions, feel free to reach out to us at [vishwavaghasiya595@gmail.com](princykanpariya321@gmail.com).
+If you have any questions or suggestions, feel free to reach out to us at [vishwavaghasiya595@gmail.com][princykanpariya321@gmail.com].
 
 Enjoy your foodie journey with Foodie Express! 🍽️🥂
 
