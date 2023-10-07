@@ -6,7 +6,7 @@ const { connectDB } = require("./src/db/dbConnection");
 const routes = require("./src/routes/v1");
 require("./src/helpers/crons");
 const config = require("./src/config/config");
-const path = require("path")
+const path = require("path");
 
 const app = express();
 
