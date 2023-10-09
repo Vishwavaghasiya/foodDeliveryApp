@@ -2,7 +2,7 @@ const express = require("express");
 const { userValidation } = require("../../validations")
 const validate = require("../../middlewares/validate");
 const { userController } = require("../../controllers");
-const auth = require("../../middlewares/auth");
+const { auth } = require("../../middlewares/auth");
 
 const router = express.Router();
 
@@ -58,7 +58,7 @@ router.post(
 
 /**Get all user */
 router.get(
-    "allUsers",
+    "/allUsers",
     userController.getAllUser
 );
 

@@ -2,15 +2,13 @@ const express = require("express");
 const { userPhotoValidation } = require("../../validations");
 const { userPhotoController } = require("../../controllers");
 const validate = require("../../middlewares/validate");
-const auth = require("../../middlewares/auth");
-const {upload} = require("../../middlewares/upload");
+const { upload } = require("../../middlewares/upload");
 
 const router = express.Router();
 
 /** create UserPhoto */
 router.post(
   "/create-UserPhoto",
-  auth(),
   upload.single("userPhoto_image"),
   validate(userPhotoValidation.createUserPhoto),
   userPhotoController.createUserPhoto

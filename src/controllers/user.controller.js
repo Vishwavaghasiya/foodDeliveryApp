@@ -1,9 +1,9 @@
 const { userService, emailService } = require("../services");
-const auth = require("../middlewares/auth");
-const bcrypt = require("bcryptjs");
+const { auth } = require("../middlewares/auth");
+const bcrypt = require("bcrypt");
 const moment = require("moment");
 const jwt = require("jsonwebtoken");
-const jwtSecretKey = "jwtsecretkeyhere"
+const jwtSecretKey = "jwtsecretkeyhere";
 
 /**Register */
 const register = async (req, res) => {
@@ -34,9 +34,9 @@ const register = async (req, res) => {
             message: data
         });
     } catch (error) {
-        res.status(error?.message || 401).json({
+        res.status(401).json({
             success: true,
-            message: error?.message || "Please authenticate !"
+            message: "Please authenticate !"
         });
     }
 }
@@ -47,6 +47,7 @@ const login = async (req, res) => {
         const { email, password } = req.body;
 
         const findUser = await userService.findUserByEmail({ email });
+        console.log(findUser, "sasdadawewifjeewrowed");
         if (!findUser) {
             throw new Error("User not found !");
         }
@@ -69,6 +70,7 @@ const login = async (req, res) => {
 
         let data;
         if (token) {
+            console.log("start")
             data = await userService.findUserAndUpdate(findUser._id, token);
         }
 
@@ -77,9 +79,9 @@ const login = async (req, res) => {
             message: data
         });
     } catch (error) {
-        res.status(error?.message || 401).json({
+        res.status(401).json({
             success: false,
-            message: error?.message || "Incorrect email or password !"
+            message: "Incorrect email or password !"
         });
     }
 }
@@ -88,9 +90,9 @@ const login = async (req, res) => {
 const getAllUser = async (req, res) => {
     try {
         console.log(req.headers.token, '');
-        await auth(req.headers.token, ['admin']);
+        await auth(req.headers.token, ['adminUser']);
 
-        const data = await userService.getAllUser({ role: "admin" });
+        const data = await userService.getAllUser({ role: "adminUser" });
         res.status(200).json({ data });
     } catch (error) {
         res.status(404).json({ error: error.message });
@@ -237,12 +239,12 @@ const sendMail = async (req, res) => {
 }
 
 module.exports = {
-    // createUser,
-    // getUserList,
-    // getUserDetails,
-    // updateUser,
+    createUser,
+    getUserList,
+    getUserDetails,
+    updateUser,
     sendMail,
-    // deleteUser,
+    deleteUser,
     register,
     login,
     getAllUser

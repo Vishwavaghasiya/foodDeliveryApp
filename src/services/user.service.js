@@ -12,8 +12,14 @@ const findUserByEmail = async (email) => {
 
 /**Find user and update */
 const findUserAndUpdate = async (_id, token) => {
-    return await User.findUserAndUpdate({ _id }, { $set: { token } }, { new: true });
-}
+    return await User.findByIdAndUpdate(
+        { _id },
+        {
+            $set: { token },
+        },
+        { new: true }
+    );
+};
 
 /**Get all user */
 const getAllUser = async (role) => {

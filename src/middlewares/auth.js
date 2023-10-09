@@ -1,14 +1,16 @@
 const jwt = require("jsonwebtoken");
 const { User } = require("../models");
 const config = require("../config/config");
+const jwtSecrectKey = "jwtsecretkeyhere";
 
-const auth = () => async (req, res, next) => {
+const auth = (role) => async (req, res, next) => {
   try {
     const token = req.headers.authorization;
+
     if (!token) {
       return next(res.status(401).json({
         status: 401,
-        message : "Please authenticate!"
+        message: "Please authenticate!"
       }));
     }
 
@@ -19,7 +21,7 @@ const auth = () => async (req, res, next) => {
 
     if (!decoded) {
     }
-    console.log(decoded,'decoded');
+    console.log(decoded, 'decoded');
     const user = await User.findOne({ _id: decoded.user });
 
     if (!user) {
@@ -28,9 +30,19 @@ const auth = () => async (req, res, next) => {
 
     req.user = user;
     next();
+
+    jwt.verify(token, jwtSecrectKey, (err, decoded) => {
+      console.log(role, 'role');
+      if (err || !role.find((ele) => ele === decoded.role)) {
+        console.log(decoded.role, 'decoded.role');
+        console.log("Error !", err);
+        throw Error("You dont have permission");
+      }
+    })
+
   } catch (error) {
     return next(new Error(error));
   }
 };
 
-module.exports = auth;
+module.exports = { auth };
