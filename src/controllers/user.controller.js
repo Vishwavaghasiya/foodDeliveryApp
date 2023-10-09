@@ -1,6 +1,103 @@
 const { userService, emailService } = require("../services");
+const auth = require("../middlewares/auth");
+const bcrypt = require("bcryptjs");
+const moment = require("moment");
+const jwt = require("jsonwebtoken");
+const jwtSecretKey = "jwtsecretkeyhere"
 
-/**create user */
+/**Register */
+const register = async (req, res) => {
+    try {
+        const { email, password, role } = req.body;
+
+        const hashPassword = await bcrypt.hash(password, 10);
+
+        let option = {
+            email,
+            role,
+            exp: moment().add(2, "days").unix(),
+        };
+
+        const token = await jwt.sign(option, jwtSecretKey);
+
+        const filter = {
+            email,
+            role,
+            password: hashPassword,
+            token
+        };
+
+        const data = await userService.createUser(filter);
+
+        res.status(200).json({
+            success: true,
+            message: data
+        });
+    } catch (error) {
+        res.status(error?.message || 401).json({
+            success: true,
+            message: error?.message || "Please authenticate !"
+        });
+    }
+}
+
+/**Login */
+const login = async (req, res) => {
+    try {
+        const { email, password } = req.body;
+
+        const findUser = await userService.findUserByEmail({ email });
+        if (!findUser) {
+            throw new Error("User not found !");
+        }
+
+        const successPassword = await bcrypt.compare(password, findUser.password);
+        if (!successPassword) {
+            throw new Error("Incorrect password !");
+        }
+
+        let option = {
+            email,
+            role: findUser.role,
+            exp: moment().add(1, "days").unix()
+        };
+
+        let token;
+        if (findUser && successPassword) {
+            token = await jwt.sign(option, jwtSecretKey);
+        }
+
+        let data;
+        if (token) {
+            data = await userService.findUserAndUpdate(findUser._id, token);
+        }
+
+        res.status(200).json({
+            success: true,
+            message: data
+        });
+    } catch (error) {
+        res.status(error?.message || 401).json({
+            success: false,
+            message: error?.message || "Incorrect email or password !"
+        });
+    }
+}
+
+/**Get all users */
+const getAllUser = async (req, res) => {
+    try {
+        console.log(req.headers.token, '');
+        await auth(req.headers.token, ['admin']);
+
+        const data = await userService.getAllUser({ role: "admin" });
+        res.status(200).json({ data });
+    } catch (error) {
+        res.status(404).json({ error: error.message });
+    }
+};
+
+/**Create user */
 const createUser = async (req, res) => {
     try {
         const reqBody = req.body;
@@ -23,7 +120,7 @@ const createUser = async (req, res) => {
     }
 }
 
-/**get user list */
+/**Get user list */
 const getUserList = async (req, res) => {
     try {
         const getList = await userService.getUserList();
@@ -44,7 +141,7 @@ const getUserList = async (req, res) => {
     }
 }
 
-/**get user details by id*/
+/**Get user details by id*/
 const getUserDetails = async (req, res) => {
     try {
         const userId = req.params.userId;
@@ -67,7 +164,7 @@ const getUserDetails = async (req, res) => {
     }
 }
 
-/**user details update by id */
+/**User details update by id */
 const updateUser = async (req, res) => {
     try {
         const userId = req.params.userId;
@@ -91,7 +188,7 @@ const updateUser = async (req, res) => {
     }
 }
 
-/**delete user */
+/**Delete user */
 const deleteUser = async (req, res) => {
     try {
         const userExists = await userService.getUserById(req.params.userId);
@@ -113,7 +210,7 @@ const deleteUser = async (req, res) => {
     }
 }
 
-/**send mail */
+/**Send mail */
 const sendMail = async (req, res) => {
     try {
         const reqBody = req.body;
@@ -140,10 +237,13 @@ const sendMail = async (req, res) => {
 }
 
 module.exports = {
-    createUser,
-    getUserList,
-    getUserDetails,
-    updateUser,
+    // createUser,
+    // getUserList,
+    // getUserDetails,
+    // updateUser,
     sendMail,
-    deleteUser
+    // deleteUser,
+    register,
+    login,
+    getAllUser
 }

@@ -5,6 +5,21 @@ const createUser = async (reqBody) => {
     return User.create(reqBody);
 }
 
+/**Find user by email */
+const findUserByEmail = async (email) => {
+    return await User.findOne(email)
+}
+
+/**Find user and update */
+const findUserAndUpdate = async (_id, token) => {
+    return await User.findUserAndUpdate({ _id }, { $set: { token } }, { new: true });
+}
+
+/**Get all user */
+const getAllUser = async (role) => {
+    return await User.find(role);
+}
+
 /**get user list */
 const getUserList = async (req, res) => {
     return User.find();
@@ -30,5 +45,8 @@ module.exports = {
     getUserList,
     getUserById,
     updateUser,
-    deleteUser
+    deleteUser,
+    findUserByEmail,
+    findUserAndUpdate,
+    getAllUser
 }
