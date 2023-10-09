@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
+    "bcrypt": "^5.1.1",
     "body-parse": "^0.1.0",
     "cors": "^2.8.5",
     "cron": "^3.0.0",
@@ -25,6 +25,7 @@
     "nodemailer": "^6.9.5",
     "nodemon": "^3.0.1",
     "path": "^0.12.7",
-    "smtp": "^0.1.4"
+    "smtp": "^0.1.4",
+    "yarn": "^1.22.19"
   }
 }
