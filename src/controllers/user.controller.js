@@ -31,7 +31,8 @@ const register = async (req, res) => {
 
         res.status(200).json({
             success: true,
-            message: data
+            message: data,
+            token
         });
     } catch (error) {
         res.status(401).json({
@@ -76,7 +77,8 @@ const login = async (req, res) => {
 
         res.status(200).json({
             success: true,
-            message: data
+            message: data,
+            token
         });
     } catch (error) {
         res.status(401).json({
@@ -89,9 +91,7 @@ const login = async (req, res) => {
 /**Get all users */
 const getAllUser = async (req, res) => {
     try {
-        console.log(req.headers.token, '');
         await auth(req.headers.token, ['adminUser']);
-
         const data = await userService.getAllUser({ role: "adminUser" });
         res.status(200).json({ data });
     } catch (error) {
