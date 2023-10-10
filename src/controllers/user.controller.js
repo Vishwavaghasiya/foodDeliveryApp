@@ -48,7 +48,6 @@ const login = async (req, res) => {
         const { email, password } = req.body;
 
         const findUser = await userService.findUserByEmail({ email });
-        console.log(findUser, "sasdadawewifjeewrowed");
         if (!findUser) {
             throw new Error("User not found !");
         }
