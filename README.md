@@ -53,6 +53,10 @@ Welcome to Foodie Express, where we bring delicious meals right to your doorstep
 - EJS (Embedded JavaScript)
 - and more...
 
+6. **Db design:**
+
+  https://dbdiagram.io/d/Restaurant-6510f306ffbf5169f06880d1
+  
 For a complete list of dependencies, check the `package.json` file.
 
  🌐 API Documentation
