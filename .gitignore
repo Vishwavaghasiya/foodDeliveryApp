@@ -1,3 +1,7 @@
 node_modules
 package-lock.json
+<<<<<<< HEAD
 .env
+=======
+public
+>>>>>>> ae4ddaea03eb6082de1c187ddd47965108700907
