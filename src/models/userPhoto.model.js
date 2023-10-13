@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const config = require("../config/config")
 
 /**user photo schema */
 const userPhotoSchema = new mongoose.Schema(

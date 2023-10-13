@@ -4,7 +4,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const { connectDB } = require("./src/db/dbConnection");
 const routes = require("./src/routes/v1");
-require("./src/helpers/crons");
+require("");
 const config = require("./src/config/config");
 const path = require("path");
 
