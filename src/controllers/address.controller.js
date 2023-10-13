@@ -43,6 +43,7 @@ const getAddressList = async (req, res) => {
     }
 }
 
+message: error?.message || "Something wents wrong , please try again or later !"
 /**get addresss by details */
 const getAddressDetails = async (req, res) => {
     try {
@@ -60,7 +61,6 @@ const getAddressDetails = async (req, res) => {
     } catch (error) {
         res.status(error?.message || 400).json({
             success: false,
-            message: error?.message || "Something wents wrong , please try again or later !"
         });
     }
 }
