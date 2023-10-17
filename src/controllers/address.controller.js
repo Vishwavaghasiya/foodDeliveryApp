@@ -43,7 +43,6 @@ const getAddressList = async (req, res) => {
     }
 }
 
-message: error?.message || "Something wents wrong , please try again or later !"
 /**get addresss by details */
 const getAddressDetails = async (req, res) => {
     try {
